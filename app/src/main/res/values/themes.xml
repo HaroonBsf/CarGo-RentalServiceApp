@@ -4,10 +4,12 @@
 
         <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
 
-        <!--<item name="android:statusBarColor">@color/app_theme_color</item>
-        <item name="android:navigationBarColor">@color/app_theme_color</item>
-        <item name="android:windowTranslucentStatus">false</item>
-        <item name="android:windowTranslucentNavigation">false</item>-->
+
+
+        <item name="android:statusBarColor">@color/app_theme_color</item>
+        <!-- <item name="android:navigationBarColor">@android:color/transparent</item>
+         <item name="android:windowTranslucentStatus">false</item>
+         <item name="android:windowTranslucentNavigation">false</item>-->
     </style>
 
     <style name="Theme.FYP" parent="Base.Theme.FYP" />

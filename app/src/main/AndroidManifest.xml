@@ -25,6 +25,9 @@
         tools:ignore="RtlEnabled"
         tools:targetApi="31">
         <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".map.OwenerGoogleMapActivity"
             android:exported="false" />
         <activity
@@ -41,8 +44,7 @@
              project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
              "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
         -->
-
-        <!--            AIzaSyDh_jppn32IvLsWf2b5QAdgwwQVrq91W44-->
+        <!-- AIzaSyDh_jppn32IvLsWf2b5QAdgwwQVrq91W44 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyB8z0EE9CrgxseALj9nG1oTr5993YVUG3c" />

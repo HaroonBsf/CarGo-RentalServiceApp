@@ -45,7 +45,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
@@ -73,17 +72,14 @@ import com.example.fyp.constant.Constant;
 import com.example.fyp.home.HomeCarType;
 import com.example.fyp.home.HomeFragment;
 import com.example.fyp.home.ProfileFragment;
-import com.example.fyp.map.GoogleMapActivity;
 import com.example.fyp.models.LocationSliderModel;
 import com.example.fyp.models.ReadWriteUserDetails;
 import com.example.fyp.search.SearchNode;
-import com.example.fyp.util.SessionManager;
 import com.example.fyp.util.Util;
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -105,37 +101,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.fyp.R;
-
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
-
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationResult;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -196,20 +161,18 @@ public class MainActivity extends AppCompatActivity {
         dataProgressView = findViewById(R.id.dataProgressView);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
+//        Window window = getWindow();
+//        window.setStatusBarColor(getResources().getColor(R.color.app_theme_color));
+//        window.setNavigationBarColor(Color.TRANSPARENT);
+//        window.getDecorView().setSystemUiVisibility(
+//                View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+
         View headerView = navigationView.getHeaderView(0);
         headerUsername = headerView.findViewById(R.id.tvHeaderUserName);
         headerEmail = headerView.findViewById(R.id.tvHeaderUserEmail);
         headerProfile = headerView.findViewById(R.id.ivHeaderProfile);
         icNextProfile = headerView.findViewById(R.id.ivHeaderProfileDetails);
         headerProfileDetails = headerView.findViewById(R.id.clHeaderDetail);
-
-
-        Window window = getWindow();
-        window.setStatusBarColor(getResources().getColor(R.color.app_theme_color));
-        window.setNavigationBarColor(getResources().getColor(R.color.app_theme_color));
-        /*window.getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);*/
-
 
 
         fab.setEnabled(true);
@@ -246,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-                    Toast.makeText(MainActivity.this, "Error! "+ error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Error! " + error.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -305,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
 
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
-                                Toast.makeText(MainActivity.this, "Error! "+ error.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Error! " + error.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
                         return true;
@@ -375,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
                     } else if (id == R.id.privacyPolicy) {
                         loadFragment(getSupportFragmentManager(), new PrivacyPolicy());
                     } else if (id == R.id.invite) {
-                        Toast.makeText(MainActivity.this, "Good Luck (MASHALLAH)", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Good Luck", Toast.LENGTH_SHORT).show();
                     } else if (id == R.id.logout) {
                         drawerLayout.closeDrawer(GravityCompat.START);
 

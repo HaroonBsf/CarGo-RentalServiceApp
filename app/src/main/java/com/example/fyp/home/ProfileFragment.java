@@ -10,9 +10,6 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.InputFilter;
-import android.text.InputType;
-import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,6 +64,7 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -78,7 +76,6 @@ public class ProfileFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         goBack = view.findViewById(R.id.ivGoBack);
         accountType = view.findViewById(R.id.tvUserAccount);
         companyName = view.findViewById(R.id.tvProfileCompany);
@@ -149,7 +146,7 @@ public class ProfileFragment extends Fragment {
         profilePhone.setText(Constant.userData.phone);
         profileCNIC.setText(Constant.userData.cnic);
 
-        /*BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getContext());
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(getContext());
         @SuppressLint("InflateParams")
         View bottomSheetView = LayoutInflater.from(getContext()).inflate(R.layout.update_data_sheet, null);
         bottomSheetDialog.setContentView(bottomSheetView);
@@ -217,7 +214,7 @@ public class ProfileFragment extends Fragment {
                     isBottomSheetOpen = true;
                 }
             }
-        });*/
+        });
 
 
         uploadProfile.setOnClickListener(new View.OnClickListener() {
