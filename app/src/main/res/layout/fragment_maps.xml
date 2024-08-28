@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map.MapsFragment">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBackToUpdate"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/dummy_white"
+        app:cardCornerRadius="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackToUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/iv_go_back" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="@dimen/_29sdp"
+        android:layout_height="@dimen/_29sdp"
+        android:background="@drawable/tracking_frag_icon_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/cvBackToUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/cvBackToUpdate"
+        app:layout_constraintStart_toStartOf="@+id/cvBackToUpdate"
+        app:layout_constraintTop_toTopOf="@+id/cvBackToUpdate" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/openMapLayouts"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:backgroundTint="@color/dummy_white"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardElevation="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/cvBackToUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cvBackToUpdate">
+
+        <ImageView
+            android:id="@+id/ivMapLayers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/map_layers"
+            app:tint="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="@dimen/_29sdp"
+        android:layout_height="@dimen/_29sdp"
+        android:background="@drawable/tracking_frag_icon_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/openMapLayouts"
+        app:layout_constraintEnd_toEndOf="@+id/openMapLayouts"
+        app:layout_constraintStart_toStartOf="@+id/openMapLayouts"
+        app:layout_constraintTop_toTopOf="@+id/openMapLayouts" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvZoomToDefault"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:backgroundTint="@color/dummy_white"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="@+id/openMapLayouts"
+        app:layout_constraintTop_toBottomOf="@+id/openMapLayouts">
+
+        <ImageView
+            android:id="@+id/ivZoomToDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/ic_current_location"
+            app:tint="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@drawable/tracking_frag_icon_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/cvZoomToDefault"
+        app:layout_constraintEnd_toEndOf="@+id/cvZoomToDefault"
+        app:layout_constraintStart_toStartOf="@+id/cvZoomToDefault"
+        app:layout_constraintTop_toTopOf="@+id/cvZoomToDefault" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCurrentLocation"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/dummy_white"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="@+id/cvZoomToDefault"
+        app:layout_constraintTop_toBottomOf="@+id/cvZoomToDefault">
+
+        <ImageView
+            android:id="@+id/ivMoveToCurrentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_3d_mpa_view"
+            app:tint="@color/black" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@drawable/tracking_frag_icon_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/cvCurrentLocation"
+        app:layout_constraintEnd_toEndOf="@+id/cvCurrentLocation"
+        app:layout_constraintStart_toStartOf="@+id/cvCurrentLocation"
+        app:layout_constraintTop_toTopOf="@+id/cvCurrentLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

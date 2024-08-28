@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="app_theme_color">#FF6771</color>
+    <color name="boarding_load_color">#707070</color>
+    <color name="unselected_item_color">#E5E5E5</color>
+    <color name="red">#F44336</color>
+    <color name="dummy_white">#FAF8F8</color>
+    <color name="hint_color">#916C6C</color>
+    <color name="my_hint">#B3A0A0</color>
+    <color name="dummy_black">#1E1E1E</color>
+    <color name="dummy_white_bg">#F1EEEE</color>
+    <color name="spinkit_color">#EAE6E6</color>
+    <color name="dummy_hint_color">#CFC6C6</color>
+    <color name="transparent_14_percent">#24000000</color>
+    <color name="booked_color">#2196F3</color>
+</resources>

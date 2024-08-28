@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".chat.FragmentChatHere">
+
+    <ImageView
+        android:id="@+id/ivCall"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivWhatsapp"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:src="@drawable/ic_whatsapp"
+        app:layout_constraintEnd_toStartOf="@+id/ivCall"
+        app:layout_constraintTop_toTopOf="@+id/ivCall" />
+
+    <TextView
+        android:id="@+id/tvViewAdInChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:text="@string/view_ad"
+        android:textColor="@color/app_theme_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivWhatsapp"
+        app:layout_constraintEnd_toStartOf="@+id/ivWhatsapp"
+        app:layout_constraintTop_toTopOf="@+id/ivWhatsapp" />
+
+    <TextView
+        android:id="@+id/tvInChatOwnerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:letterSpacing=".02"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_8sdp"
+        android:text="@string/dummy"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivCall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewAdInChat"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tvInChatOwnerCompany"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:letterSpacing=".02"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_8sdp"
+        android:text="@string/dummy"
+        android:textColor="@color/dummy_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivCall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInChatOwnerName"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tvInChatAdInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:letterSpacing=".02"
+        android:paddingStart="@dimen/_8sdp"
+        android:text="@string/dummy"
+        android:textColor="@color/hint_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ivCall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInChatOwnerCompany"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInChatAdInfo" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/add_new_car_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/ivSendMsg"
+            android:background="@null"
+            android:fontFamily="@font/product_sans_regular"
+            android:hint="@string/start_typing"
+            android:inputType="textShortMessage"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:textColor="@color/dummy_black"
+            android:textColorHint="@color/boarding_load_color"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="14sp"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/ivSendMsg"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_send_msg"
+            app:tint="@color/app_theme_color" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDisclaimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:letterSpacing=".02"
+        android:lineSpacingMultiplier="1.15"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:text="@string/chat_note"
+        android:textAlignment="center"
+        android:textColor="@color/dummy_hint_color"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInChatAdInfo"
+        tools:ignore="RtlSymmetry" />
+
+    <ProgressBar
+        android:id="@+id/chatProgressBar"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/app_theme_color"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

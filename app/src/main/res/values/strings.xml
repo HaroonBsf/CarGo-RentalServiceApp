@@ -1,0 +1,1847 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Car Go</string>
+    <string name="skip">Skip</string>
+    <string name="get_fastest_service">Get fastest service</string>
+    <string name="we_offer_fastest_service_in_any_area">We offer fastest service in your area</string>
+    <string name="find_nearest_shop">Find nearest car rental services</string>
+    <string name="you_can_get_your_favorite_car_in_just_one_click">choose best option!</string>
+    <string name="next">Next</string>
+    <string name="log_in">Log in</string>
+    <string name="welcome_back">Welcome</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="password">Password</string>
+    <string name="user_name">User Name</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="or_log_in_with">Or log in with</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_your_email_to_recover">Enter your email to recover</string>
+    <string name="send">Send</string>
+    <string name="enter_your_email_here">Enter your email here</string>
+    <string name="otp">OTP</string>
+    <string name="email_verification_process">Phone Verification</string>
+    <string name="enter_code_here">Enter the otp sent to</string>
+    <string name="confirm">Confirm</string>
+    <string name="didn_t_received_the_otp">Didn\'t receive the OTP?</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="choose_a_new_password">Choose a new password</string>
+    <string name="re_enter_new_password">Re-enter new password</string>
+    <string name="done">Done</string>
+    <string name="already_have_an_account">Already have an Account?</string>
+    <string name="sign_up_as">Sign Up As</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="email_address">Email address</string>
+    <string name="settings">Settings</string>
+    <string name="privacy_amp_policy"><![CDATA[Privacy & policy]]></string>
+    <string name="invite_friends">Invite friends</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="my_ads">My Ads</string>
+    <string name="help">Help</string>
+    <string name="messages">Messages</string>
+    <string name="openDrawer">Open navigation drawer</string>
+    <string name="closeDrawer">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_started">Get started</string>
+    <string name="individual">Individual</string>
+    <string name="company">Company</string>
+    <string name="name">Name</string>
+    <string name="company_name">Company name</string>
+    <string name="cnic">CNIC</string>
+    <string name="password_min_6_characters">Password (min : 6 characters)</string>
+    <string name="email">Email</string>
+    <string name="we_have_blocked_requests_from_this_device_due_to_unusual_activity">We have blocked all requests from this\ndevice due to unusual activity</string>
+    <string name="try_again_later">Try Again Later</string>
+    <string name="header_image">Header Image</string>
+    <string name="bus">Bus</string>
+    <string name="suv">SUV</string>
+    <string name="sedan">Sedan</string>
+    <string name="hatchback">HatchBack</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="car_go">Car Go</string>
+    <string name="all_vehicles">All Vehicles</string>
+    <string name="no_internet_please_connect_to_ninternet_and_try_again">No Internet! Please connect to\ninternet and try again.</string>
+    <string name="cancel">Cancel</string>
+    <string name="phone">Phone</string>
+    <string name="profile">Profile</string>
+    <string name="dummyprofile_gmail_com">dummyprofile@gmail.com</string>
+    <string name="my_rental_cars">No Services</string>
+    <string name="currently_there_are_no_cars_added">Currently there are no cars added.</string>
+    <string name="new_car">+New Car</string>
+    <string name="location">Location</string>
+    <string name="create">Create</string>
+    <string name="account_information">Account Information</string>
+    <string name="your_current_sign_in_is_associated_with_a_user_account_do_you_want_to_switch_to_the_company_account">Your current sign-in is associated with a user account. Do you want to switch to the company account?</string>
+    <string name="terms_detail">You\'re going to put your car up for rent. You and the rentee\'s transactions are not CarGo\'s responsibility. Proceed at your own risk.</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="add_new_car">Add New Car</string>
+    <string name="add_car_images">Add Car Images</string>
+    <string name="select_model_year">Select Model Year</string>
+    <string name="model_year">Model Year</string>
+    <string name="car_transmission">Car Transmission</string>
+    <string name="car_model">Car Model</string>
+    <string name="car_make">Car Make</string>
+    <string name="engine_type">Engine Type</string>
+    <string name="engine_capacity">Engine Capacity</string>
+    <string name="body_color">Body Color</string>
+    <string name="seating_capacity">Seating Capacity</string>
+    <string name="car_type">Car Type</string>
+    <string name="pickup_city">Pickup City</string>
+    <string name="car_mileage">Car Mileage (km)</string>
+    <string name="registration_city">Registration City</string>
+    <string name="driver_availability">Driver Availability</string>
+    <string name="car_rent_rs">Car Rent (Rs)</string>
+    <string name="save">Save</string>
+    <string name="retry">Retry</string>
+    <string name="description_optional">Description (Optional)</string>
+    <string name="enter_here">Enter Here…</string>
+    <string name="car_mileage_in_km_s">Car Mileage in km\'s</string>
+    <string name="car_variant">Car Variant</string>
+    <string name="insured">Insured</string>
+    <string name="select_year">Select Year</string>
+    <string name="_2024">2024</string>
+    <string name="ok">OK</string>
+    <string name="select_item">Select City</string>
+    <string name="close">Close</string>
+    <string name="abbottabad">Abbottabad</string>
+    <string name="select_pickup_city">Select Pickup City</string>
+    <string name="_5_photos">/8 photos</string>
+    <string name="_0">0</string>
+    <string name="rs">Rs.</string>
+    <string name="_100000">100000</string>
+    <string name="day">/day</string>
+    <string name="lahore">Lahore</string>
+    <string name="dummy">dummy</string>
+    <string name="lamborghini">Lamborghini</string>
+    <string name="variant">Variant</string>
+    <string name="model">Model</string>
+    <string name="in_review">In Review</string>
+    <string name="honda_city">Honda City 2007</string>
+    <string name="update_on">Update On</string>
+    <string name="mar_5_2024">Mar 5, 2024</string>
+    <string name="owner">Owner:</string>
+    <string name="contact_renter">Contact Renter</string>
+    <string name="description">Description</string>
+    <string name="_100">100%</string>
+    <string name="no_messages_available_at_the_moment">No messages available at the moment.</string>
+    <string name="initiate_conversation_with_the_renter_about_the_rental">Initiate conversation with the renter about the rental process.</string>
+    <string name="start">Start</string>
+    <string name="view_ad">View Ad</string>
+    <string name="start_typing" tools:ignore="TypographyEllipsis">Type a message...</string>
+    <string name="chat_note">Note!\nYou will be interacting with the renter directly at this point. Car Go is not responsible for any dealings between you and the renter. Proceed at your own risk.</string>
+    <string name="s400l_2023">S400L 2023</string>
+    <string name="edit">Edit</string>
+    <string name="set_as_booked">Set as Booked</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="car_rental_services">Car rental services</string>
+    <string name="enter_your_cnic">Enter your CNIC</string>
+    <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="our_application_will_also_help_you_to_find_nyour_car_from_any_location">Our application will also help you to locate\nyour car from any location.</string>
+    <string name="find_your_car_nfrom_any_location">Find your car\nfrom any location</string>
+    <string name="start_tracking">Start tracking</string>
+    <string name="map_type">Map type</string>
+    <string name="satellite">Satellite</string>
+    <string name="terrain">Terrain</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="booked">Booked</string>
+    <string name="search_by_tab">Search by Tab</string>
+    <string name="rent">Rent:</string>
+    <string name="search_car">Search by car name</string>
+    <string name="sorry">SORRY!</string>
+    <string name="your_search_not_found">Your Search Not Found</string>
+    <string name="cancel_booking">Cancel booking</string>
+    <string name="update">Update</string>
+    <string name="edit_car">Edit Car</string>
+    <string name="select_insurance_status">Select Insurance Status</string>
+    <string name="yes">\u2022 Yes</string>
+    <string name="no">\u2022 No</string>
+    <string name="select_driver_availabilty">Select Driver Availability</string>
+    <string name="only_with_driver">\u2022 Only with Driver</string>
+    <string name="driver_on_demand">\u2022 Driver on Demand</string>
+    <string name="without_driver">\u2022 Without Driver</string>
+    <string name="faisalabad">\u2022 Faisalabad</string>
+    <string name="other">\u2022 Other</string>
+    <string name="multan">\u2022 Multan</string>
+    <string name="rawalpindi">\u2022 Rawalpindi</string>
+    <string name="islamabad">\u2022 Islamabad</string>
+    <string name="karachi">\u2022 Karachi</string>
+    <string name="hyderabad">\u2022 Hyderabad</string>
+    <string name="peshawar">\u2022 Peshawar</string>
+    <string name="quetta">\u2022 Quetta</string>
+    <string name="select_registration_city">Select Registration City</string>
+    <string name="oops_we_couldn_t_find_any_cities">Oops! We couldn\'t find any cities</string>
+    <string name="u2022_lahore">• Lahore</string>
+    <string name="result_s">Result(s)</string>
+    <string name="sort">Sort</string>
+    <string name="select_your_choice">Select Your Choice</string>
+    <string name="car_rent_from_low_to_high">\u25EF  Car Rent (From Low to High)</string>
+    <string name="car_rent_from_high_to_low">\u25EF  Car Rent (From High to Low)</string>
+    <string name="car_model_from_old_to_new">\u25EF  Car Model (From Old to New)</string>
+    <string name="car_model_from_new_to_old">\u25EF  Car Model (From New to Old)</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+    <string name="how_can_we_help">How can we help?</string>
+    <string name="email_support">Email\nSupport</string>
+    <string name="call_help_ncenter">Call Help\nCenter</string>
+    <string name="whatsapp_nsupport">WhatsApp\nSupport</string>
+    <string name="show_me_nhints">Show me\nHints</string>
+    <string name="registration">Registration</string>
+    <string name="how_do_i_register_for_an_account_on_car_go">How do I register for an account on Car Go?</string>
+    <string name="registration_info_text">To start using Car Go, you\'ll need to create an account. Tap on the \'Sign Up\' button found on the home screen. Fill in your full name, email address, phone number, CNIC, and create a secure password. You will receive an OTP on phone number; enter the OTP to verify your phone number. Finally, provide any additional information needed to complete your profile setup. By following these steps, you\'ll be ready to start booking cars with Car Go. If you face any issues during the registration process, don\'t hesitate to contact our support team for help. Welcome to Car Go, and enjoy your ride!</string>
+    <string name="booking">Booking</string>
+    <string name="how_do_i_book_a_car_on_car_go">How do I book a car on Car Go?</string>
+    <string name="booking_details">To book a car on Car Go, start by logging into your account. Browse through the available cars by using the search filters to find the one that suits your needs. Once you have selected a car, click on the \"Contact Renter\" button. Communicate with the renter to discuss your requirements, including pick-up and drop-off dates and locations. After agreeing on the terms, you can finalize the booking with the renter.</string>
+    <string name="upload_ads">Upload Ads</string>
+    <string name="how_can_users_upload_ads_on_car_go">How can users upload ads on Car Go?</string>
+    <string name="to_upload_ads_on_car_go_users_can_initiate_the_process_by_converting_their_personal_accounts_into_company_accounts_if_they_don_t_have_company_account_once_the_account_is_successfully_converted_users_gain_access_to_upload_ads_by_clicking_on_quot_new_car_quot_button">To upload ads on Car Go, users can initiate the process by converting their personal accounts into company accounts, If you don\'t have company account. Once the account is successfully converted, users gain access to upload Ads by clicking on \"+New Car\" button available in My Ads.</string>
+    <string name="convert_account">Convert Account</string>
+    <string name="how_can_i_convert_my_personal_account_into_a_company_account_on_car_go">How can I convert my personal account into a company account on Car Go?</string>
+    <string name="convert_acount_details">If you currently have a user account on Car Go and wish to access advanced features such as uploading ads and managing your rental listings more effectively, converting your account to a company account is a seamless process. Simply navigate to the \"My Ads\" section within the Car Go app. Upon clicking on the \"My Ads\" item, a dialog will prompt you to convert your account into a company account. By filling in your company name, you can swiftly initiate the conversion process. Once completed, your account will be upgraded, with your new company account, you\'ll have the ability to upload ads.</string>
+    <string name="nearest_car">Nearest Car</string>
+    <string name="how_do_i_find_the_nearest_car_rental_options_on_car_go">How do I find the nearest car rental options on Car Go?</string>
+    <string name="nearest_car_details">Finding the nearest car rental options on Car Go is a seamless process designed to help you locate the perfect vehicle for your needs. To begin, simply click on the search button from the home screen to navigate to the search screen. Here, you\'ll find a range of filters and search options to refine your results. To locate the nearest car rental options, you can utilize the location-based search feature. By enabling location services or manually entering your location, Car Go will display a list of rental options closest to you. Once you\'ve identified a listing that interests you, simply click on it to view more details. Here, you\'ll find information about the rental, including photos, pricing, and availability. With Car Go\'s intuitive search functionality, you can easily find and book the nearest car rental options, ensuring a convenient and efficient rental experience.</string>
+    <string name="charges_may_apply">Charges may apply</string>
+    <string name="charges_alert">Please note that standard call charges may apply when contacting support.</string>
+    <string name="call_help_center">Call Help Center</string>
+    <string name="show_hints">Show Hints</string>
+    <string name="would_you_like_a_guided_tour_of_our_app">Would you like a guided tour of our app?</string>
+    <string name="start_app_tour">Start App Tour</string>
+    <string name="nearest">Nearest</string>
+    <string name="reserved">Reserved</string>
+    <string-array name="car_make">
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Changan</item>
+        <item>Chery</item>
+        <item>DFSK</item>
+        <item>Daihatsu</item>
+        <item>Daewoo</item>
+        <item>FAW</item>
+        <item>GMC</item>
+        <item>Haval</item>
+        <item tools:ignore="Typos">Higer</item>
+        <item>Honda</item>
+        <item>Hyundai</item>
+        <item>Isuzu</item>
+        <item>JW</item>
+        <item>KIA</item>
+        <item>Land Rover</item>
+        <item>Lexus</item>
+        <item>Mercedes-Benz</item>
+        <item>MG</item>
+        <item>Mazda</item>
+        <item>Mitsubishi</item>
+        <item>Nissan</item>
+        <item>Proton</item>
+        <item>Prince</item>
+        <item>Rolls-Royce</item>
+        <item>Suzuki</item>
+        <item>Toyota</item>
+        <item>United</item>
+        <item>Yutong</item>
+    </string-array>
+    <string-array name="car_model_audi">
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+        <item>A6</item>
+        <item>Q7</item>
+        <item>e-tron</item>
+        <item>e-tron GT</item>
+        <item>e-tron GT RS</item>
+    </string-array>
+    <string-array name="car_model_BMW">
+        <item>3 Series</item>
+        <item>5 Series</item>
+        <item>7 Series</item>
+        <item>X1</item>
+        <item>X5 Series</item>
+    </string-array>
+    <string-array name="car_model_changan">
+        <item>Alsvin</item>
+        <item>Karvaan</item>
+        <item>M9</item>
+    </string-array>
+    <string-array name="car_model_chery">
+        <item>QQ</item>
+    </string-array>
+    <string-array name="car_model_DFSK">
+        <item>C37</item>
+        <item>Glory 580</item>
+    </string-array>
+    <string-array name="car_model_mercedes_benz">
+        <item>C Class</item>
+        <item>E Class</item>
+        <item>Panther</item>
+        <item>S Class</item>
+    </string-array>
+    <string-array name="car_model_daihatsu">
+        <item>Atrai Wagon</item>
+        <item>Bego</item>
+        <item>Copen</item>
+        <item>Cuore</item>
+        <item>Hijet</item>
+        <item>Mira</item>
+        <item>Move</item>
+        <item>Move Conte</item>
+    </string-array>
+    <string-array name="car_model_Daewoo">
+        <item>Standard</item>
+    </string-array>
+    <string-array name="car_model_GMC">
+        <item>Sierra</item>
+    </string-array>
+    <string-array name="car_model_FAW">
+        <item>V2</item>
+        <item>X-PV</item>
+    </string-array>
+    <string-array name="car_model_haval">
+        <item>H6</item>
+        <item>Jolion</item>
+    </string-array>
+    <string-array name="car_model_higer">
+        <item>Standard</item>
+    </string-array>
+    <string-array name="car_model_Honda">
+        <item>Accord</item>
+        <item>Airwave</item>
+        <item>BR-V</item>
+        <item>CR-Z</item>
+        <item>City</item>
+        <item>Civic</item>
+        <item>Fit</item>
+        <item>N One</item>
+        <item>N Wagon</item>
+        <item>Vezel</item>
+    </string-array>
+    <string-array name="car_model_hyundai">
+        <item>Elantra</item>
+        <item>Grand Starex</item>
+        <item>Santro</item>
+        <item>Shehzore</item>
+        <item>Sonata</item>
+        <item>Tucson</item>
+    </string-array>
+    <string-array name="car_model_isuzu">
+        <item>D-Max</item>
+    </string-array>
+    <string-array name="car_model_KIA">
+        <item>Carnival</item>
+        <item>Picanto</item>
+        <item>Spectra</item>
+        <item>Sportage</item>
+        <item>Stonic</item>
+    </string-array>
+    <string-array name="car_model_JW">
+        <item>Forland</item>
+    </string-array>
+    <string-array name="car_model_land_rover">
+        <item>Range Rover</item>
+    </string-array>
+    <string-array name="car_model_lexus">
+        <item>CT200h</item>
+        <item>LX Series</item>
+        <item>RX Series</item>
+    </string-array>
+    <string-array name="car_model_MG">
+        <item>HS</item>
+        <item>ZS</item>
+        <item>ZS EV</item>
+    </string-array>
+    <string-array name="car_model_mazda">
+        <item>B2200</item>
+        <item>RX8</item>
+        <item>Scrum</item>
+    </string-array>
+    <string-array name="car_model_yutong">
+        <item>Standard</item>
+    </string-array>
+    <string-array name="car_model_united">
+        <item>Alpha</item>
+        <item>Bravo</item>
+    </string-array>
+    <string-array name="car_model_rolls_royce">
+        <item>Phantom</item>
+        <item>Ghost</item>
+    </string-array>
+    <string-array name="car_model_proton">
+        <item>Saga</item>
+        <item>X70</item>
+    </string-array>
+    <string-array name="car_model_toyota">
+        <item>Aqua</item>
+        <item>Coaster</item>
+        <item>Corolla</item>
+        <item>Corolla-Axio</item>
+        <item>Corolla-Fielder</item>
+        <item>Crown</item>
+        <item>Fortuner</item>
+        <item>Hiace</item>
+        <item>Hilux</item>
+        <item>Land Cruiser</item>
+        <item>Mark X</item>
+        <item>Noah</item>
+        <item>Passo</item>
+        <item>Platz</item>
+        <item>Prado</item>
+        <item>Premio</item>
+        <item>Prius</item>
+        <item>Probox</item>
+        <item>Rush</item>
+        <item>Surf</item>
+        <item>Tundra</item>
+        <item>Vitz</item>
+        <item>Yaris</item>
+    </string-array>
+    <string-array name="car_model_suzuki">
+        <item>APV</item>
+        <item>Alto</item>
+        <item>Baleno</item>
+        <item>Bolan</item>
+        <item>Ciaz</item>
+        <item>Cultus</item>
+        <item>Every</item>
+        <item>Khyber</item>
+        <item>Liana</item>
+        <item>Margalla</item>
+        <item>Mehran</item>
+        <item>Ravi</item>
+        <item>Swift</item>
+        <item>Wagon R</item>
+    </string-array>
+    <string-array name="car_model_prince">
+        <item>K07</item>
+        <item>Pearl</item>
+    </string-array>
+    <string-array name="car_model_nissan">
+        <item>350 Z</item>
+        <item>AD Van</item>
+        <item>Clipper</item>
+        <item>Dayz</item>
+        <item>Juke</item>
+        <item>Sunny</item>
+    </string-array>
+    <string-array name="car_model_mitsubishi">
+        <item>EK Wagon</item>
+        <item>Hiace</item>
+        <item>Lancer</item>
+        <item>Pajero</item>
+        <item>Pajero-Mini</item>
+    </string-array>
+
+
+    <string-array name="car_transmission_one">
+        <item>Manual</item>
+    </string-array>
+    <string-array name="car_transmission_two">
+        <item>Manual</item>
+        <item>Automatic</item>
+    </string-array>
+    <string-array name="car_transmission_three">
+        <item>Automatic</item>
+    </string-array>
+
+
+    <string-array name="engine_type_petrol">
+        <item>Petrol</item>
+    </string-array>
+    <string-array name="engine_type_electric">
+        <item>Electric</item>
+    </string-array>
+    <string-array name="engine_type_diesel">
+        <item>Diesel</item>
+    </string-array>
+    <string-array name="engine_type_petrol_diesel">
+        <item>Diesel</item>
+        <item>Petrol</item>
+    </string-array>
+    <string-array name="engine_type_petrol_CNG">
+        <item>Petrol</item>
+        <item>Petrol/CNG</item>
+    </string-array>
+    <string-array name="engine_type_petrol_hybrid">
+        <item>Hybrid</item>
+        <item>Petrol</item>
+    </string-array>
+    <string-array name="engine_type_petrol_diesel_hybrid">
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>Hybrid</item>
+    </string-array>
+    <string-array name="engine_type_petrol_hybrid_electric">
+        <item>Petrol</item>
+        <item>Hybrid</item>
+        <item>Electric</item>
+    </string-array>
+    <string-array name="engine_type_petrol_CNG_diesel">
+        <item>Petrol</item>
+        <item>Petrol/CNG</item>
+        <item>Diesel</item>
+    </string-array>
+    <string-array name="engine_type_petrol_CNG_hybrid">
+        <item>Petrol</item>
+        <item>Petrol/CNG</item>
+        <item>Hybrid</item>
+    </string-array>
+    <string-array name="engine_type_petrol_diesel_hybrid_electric">
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>Hybrid</item>
+        <item>Electric</item>
+    </string-array>
+
+
+    <string-array name="body_color_one">
+        <item>White</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Blue</item>
+        <item>Silver</item>
+        <item>Grey</item>
+        <item>Green</item>
+        <item>Gold</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_elantra">
+        <item>Black</item>
+        <item>White</item>
+        <item>Brown</item>
+        <item>Blue</item>
+        <item>Silver</item>
+        <item>Grey</item>
+        <item>Green</item>
+        <item>Gold</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_two">
+        <item>White</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Blue</item>
+        <item>Silver</item>
+        <item>Grey</item>
+        <item>Green</item>
+        <item>Gold</item>
+        <item>Red</item>
+        <item>Maroon</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_three">
+        <item>White</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Blue</item>
+        <item>Silver</item>
+        <item>Grey</item>
+        <item>Green</item>
+        <item>Gold</item>
+        <item>Red</item>
+        <item>Maroon</item>
+        <item>Yellow</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_e_tron_GT">
+        <item>Kemora Grey</item>
+        <item>Mythos Black Metallic</item>
+        <item>Suzuka Gray Metallic</item>
+        <item>Tango Red Metallic</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_haval_h6">
+        <item>Atlantis Blue</item>
+        <item>Ayers Grey</item>
+        <item>Energy Green</item>
+        <item>Hamilton White</item>
+        <item>Messiah Brown</item>
+        <item>Red</item>
+        <item>Sun Gold Black</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_haval_jolion">
+        <item>Azure Blue</item>
+        <item>Golden Black</item>
+        <item>Hamilton White</item>
+        <item>Mars Red</item>
+        <item>Smoke Grey</item>
+        <item>Vivid Green</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_shehzore">
+        <item>White</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_sonata">
+        <item>Diamond Metallic Black</item>
+        <item>Hampton Grey</item>
+        <item>Metallic Silver</item>
+        <item>Oxford Blue</item>
+        <item>Polar White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_JW">
+        <item>Blue</item>
+        <item>White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_stonic">
+        <item>Black</item>
+        <item>White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_ZS">
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_ZS_EV">
+        <item>Copenhagen Blue</item>
+        <item>Diamond Red</item>
+        <item>Dover White</item>
+        <item>Pebble Blue</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_proton_saga">
+        <item>Armour Silver</item>
+        <item>Jet Grey</item>
+        <item>Rosewood Maroon</item>
+        <item>Ruby Red</item>
+        <item>Snow White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_proton_x70">
+        <item>Jet Grey</item>
+        <item>Quartz Black</item>
+        <item>Snow White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="body_color_united_alpha">
+        <item>Blue</item>
+        <item>Dark Grey</item>
+        <item>Golden</item>
+        <item>Red</item>
+        <item>Silver</item>
+        <item>White</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="car_variant_audi_one">
+        <item>TFSI</item>
+    </string-array>
+    <string-array name="car_variant_A6">
+        <item>TFSI</item>
+        <item>TFSI Business Class</item>
+        <item>TFSI Quattro</item>
+    </string-array>
+    <string-array name="car_variant_Q7">
+        <item>TDI</item>
+        <item>TFSI</item>
+    </string-array>
+    <string-array name="car_variant_e_tron">
+        <item>50 Quattro</item>
+    </string-array>
+    <string-array name="car_variant_e_tron_gt">
+        <item>Audi e-tron GT Standard</item>
+    </string-array>
+    <string-array name="car_variant_e_tron_gt_rs">
+        <item>Audi e-tron GT RS</item>
+    </string-array>
+    <string-array name="car_variant_BMW_3_series">
+        <item>316i</item>
+        <item>318i</item>
+        <item>320i</item>
+        <item>320d</item>
+    </string-array>
+    <string-array name="car_variant_BMW_5_series">
+        <item>520d</item>
+        <item>520i</item>
+        <item>523i</item>
+        <item>525i</item>
+        <item>530d</item>
+        <item>530e</item>
+        <item>530i</item>
+    </string-array>
+    <string-array name="car_variant_BMW_7_series">
+        <item>730d</item>
+        <item>730Ld</item>
+        <item>735i</item>
+        <item>740 Le xDrive</item>
+        <item>740Li</item>
+        <item>745Li</item>
+    </string-array>
+    <string-array name="car_variant_BMW_X1">
+        <item>sDrive</item>
+    </string-array>
+    <string-array name="car_variant_BMW_X5_series">
+        <item>i</item>
+        <item>xDrive</item>
+    </string-array>
+    <string-array name="car_variant_changan_alsvin">
+        <item>Comfort</item>
+        <item>Lumiere</item>
+    </string-array>
+    <string-array name="car_variant_changan_two">
+        <item>Base Model 1.0</item>
+    </string-array>
+    <string-array name="car_variant_chery">
+        <item>Null</item>
+    </string-array>
+    <string-array name="car_variant_DFSK_C37">
+        <item>Euro V</item>
+    </string-array>
+    <string-array name="car_variant_DFSK_Glory_580">
+        <item>Pro</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Atari_Wagon">
+        <item>Custom Turbo R</item>
+        <item>Custom Turbo RS</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Bego">
+        <item>CX</item>
+        <item>CL</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Copen">
+        <item>Cero</item>
+        <item>Robe</item>
+        <item>Robe S</item>
+        <item>X-PLay</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Cuore">
+        <item>CL</item>
+        <item>CX</item>
+        <item>Cl Eco</item>
+        <item>CX Eco</item>
+        <item>CX Ecomatic</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Hijet">
+        <item>Cruise</item>
+        <item>Cruise Turbo</item>
+        <item>Deluxe</item>
+        <item>Special</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Mira">
+        <item>B</item>
+        <item>L</item>
+        <item>X</item>
+        <item>G</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Move">
+        <item>L</item>
+        <item>X</item>
+        <item>X Turbo</item>
+    </string-array>
+    <string-array name="car_variant_Daihatsu_Move_Conte">
+        <item>Custom G</item>
+        <item>Custom RS</item>
+    </string-array>
+    <string-array name="car_variant_Daewoo_Standard">
+        <item>Economy</item>
+        <item>Business Class</item>
+    </string-array>
+    <string-array name="car_variant_FAW_V2">
+        <item>VCT-i</item>
+    </string-array>
+    <string-array name="car_variant_FAW_X_PV">
+        <item>Standard</item>
+        <item>Dual AC</item>
+        <item>Power Edition</item>
+    </string-array>
+    <string-array name="car_variant_GMC_Sierra">
+        <item>SLT</item>
+    </string-array>
+    <string-array name="car_variant_Haval_H6">
+        <item>Haval H6 High</item>
+    </string-array>
+    <string-array name="car_variant_Haval_Jolion">
+        <item>Haval Jolion Top</item>
+    </string-array>
+    <string-array name="car_variant_Honda_Accord">
+        <item>CF3</item>
+        <item>CL7</item>
+        <item>CL9</item>
+        <item>EX</item>
+        <item>Type S</item>
+        <item>VTi</item>
+    </string-array>
+    <string-array name="car_variant_Honda_Airwave">
+        <item>M</item>
+        <item>MS Package</item>
+        <item>ST</item>
+    </string-array>
+    <string-array name="car_variant_Honda_BR_V">
+        <item>i-VTEC</item>
+        <item>i-VTEC S</item>
+    </string-array>
+    <string-array name="car_variant_Honda_CR_Z">
+        <item>Alpha</item>
+        <item>Base Grade</item>
+    </string-array>
+    <string-array name="car_variant_Honda_City">
+        <item>EXi</item>
+        <item>EXi Neo 1.5</item>
+        <item>i-DSI</item>
+        <item>i-VTEC</item>
+        <item>Aspire i-VTEC</item>
+        <item>EXi S</item>
+        <item>i-DSI Vario</item>
+        <item>VTEC Steermatic</item>
+    </string-array>
+    <string-array name="car_variant_Honda_Civic">
+        <item>1.8 i-VTEC CVT</item>
+        <item>Oriel 1.8 i-VTEC CVT</item>
+        <item>RS Turbo</item>
+        <item>1.5 VTEC Turbo Oriel</item>
+        <item>Turbo 1.5 VTEC CVT</item>
+        <item>VTi Oriel</item>
+    </string-array>
+    <string-array name="car_variant_Honda_Fit">
+        <item>F Package</item>
+        <item>L Package</item>
+        <item>S Package</item>
+    </string-array>
+    <string-array name="car_variant_Honda_N_One">
+        <item>G</item>
+        <item>GL Package</item>
+        <item>Premium</item>
+        <item>Premium Tourer</item>
+    </string-array>
+    <string-array name="car_variant_Honda_N_Wagon">
+        <item>C</item>
+        <item>G</item>
+        <item>Custom G</item>
+        <item>Custom G Turbo</item>
+        <item>Custom G L Package</item>
+        <item>G A Package</item>
+        <item>G L Package</item>
+        <item>G Turbo</item>
+    </string-array>
+    <string-array name="car_variant_Honda_Vezel">
+        <item>G</item>
+        <item>X</item>
+        <item>XL</item>
+        <item>Z</item>
+    </string-array>
+    <string-array name="car_variant_Hyundai_Elantra">
+        <item>GLS</item>
+        <item>GL 1.6</item>
+    </string-array>
+    <string-array name="car_variant_Hyundai_Grand_Starex">
+        <item>GL</item>
+        <item>GLS</item>
+        <item>GLX</item>
+    </string-array>
+    <string-array name="car_variant_Hyundai_Santro">
+        <item>Club</item>
+        <item>Club GV</item>
+        <item>Exec</item>
+        <item>Exec GV</item>
+        <item>Prime</item>
+        <item>Prime GV</item>
+        <item>Plus</item>
+    </string-array>
+    <string-array name="car_variant_Hyundai_Shehzore">
+        <item>H-100</item>
+    </string-array>
+    <string-array name="car_variant_Hyundai_Sonata">
+        <item>2.0</item>
+        <item>2.5</item>
+    </string-array>
+    <string-array name="car_variant_Hyundai_Tucson">
+        <item>AWD Ultimate</item>
+        <item>FWD GLS Sport</item>
+    </string-array>
+    <string-array name="car_variant_Isuzu_D_Max">
+        <item>V-Cross</item>
+    </string-array>
+    <string-array name="car_variant_JW_Forland">
+        <item>Forland Bravo 3.0+</item>
+        <item>Forland C-19</item>
+    </string-array>
+    <string-array name="car_variant_KIA_Carnival">
+        <item>EX</item>
+        <item>LX</item>
+    </string-array>
+    <string-array name="car_variant_KIA_Picanto">
+        <item>1.0</item>
+    </string-array>
+    <string-array name="car_variant_KIA_Spectra">
+        <item>1.5</item>
+        <item>1.6</item>
+    </string-array>
+    <string-array name="car_variant_KIA_Sportage">
+        <item>4WD</item>
+        <item>AWD</item>
+    </string-array>
+    <string-array name="car_variant_KIA_Stonic">
+        <item>EX</item>
+        <item>EX+</item>
+    </string-array>
+    <string-array name="car_variant_Land_Rover_Range_Rover">
+        <item>Vogue</item>
+        <item>Sport</item>
+        <item>Classic</item>
+        <item>Evoque</item>
+        <item>Autobiography</item>
+    </string-array>
+    <string-array name="car_variant_Lexus_CT200h">
+        <item>Base Model</item>
+        <item>F Sport</item>
+        <item>Version C</item>
+        <item>Version L</item>
+    </string-array>
+    <string-array name="car_variant_Lexus_LX_Series">
+        <item>LX470</item>
+        <item>LX570</item>
+    </string-array>
+    <string-array name="car_variant_Lexus_RX_Series">
+        <item>450H</item>
+    </string-array>
+    <string-array name="car_variant_Mercedes_Benz_C_Class">
+        <item>C180</item>
+        <item>C180 AMG</item>
+        <item>C180 Advantgrade</item>
+        <item>C180 Exlusive</item>
+        <item>C180 Kompressor</item>
+        <item>C200</item>
+        <item>C200 CDI</item>
+    </string-array>
+    <string-array name="car_variant_Mercedes_Benz_E_Class">
+        <item>E180</item>
+        <item>E200</item>
+        <item>E220</item>
+        <item>E230</item>
+        <item>E240</item>
+        <item>E250</item>
+        <item>E280</item>
+        <item>E300</item>
+    </string-array>
+    <string-array name="car_variant_Mercedes_Benz_S_Class">
+        <item>300SE</item>
+        <item>S280</item>
+        <item>S320</item>
+        <item>S350</item>
+        <item>S400</item>
+        <item>S400L</item>
+        <item>S500</item>
+        <item>S500e</item>
+    </string-array>
+    <string-array name="car_variant_Mercedes_Benz_Panther">
+        <item>MB-140</item>
+    </string-array>
+    <string-array name="car_variant_MG_HS">
+        <item>Turbo</item>
+    </string-array>
+    <string-array name="car_variant_MG_ZS">
+        <item>MG ZS 1.5L</item>
+    </string-array>
+    <string-array name="car_variant_MG_ZS_EV">
+        <item>MG ZS EV Luxury</item>
+    </string-array>
+    <string-array name="car_variant_Mazda_B2200">
+        <item>Base</item>
+    </string-array>
+    <string-array name="car_variant_Mazda_RX8">
+        <item>Type E</item>
+        <item>Type S</item>
+        <item>Base Grade</item>
+    </string-array>
+    <string-array name="car_variant_Mazda_Scrum">
+        <item>PA</item>
+        <item>PC</item>
+        <item>Buster</item>
+    </string-array>
+    <string-array name="car_variant_Mitsubishi_Ek_Wagon">
+        <item>E</item>
+        <item>G</item>
+        <item>M</item>
+        <item>T</item>
+    </string-array>
+    <string-array name="car_variant_Mitsubishi_Pajero_Mini">
+        <item>XR</item>
+        <item>VR</item>
+        <item>ZR</item>
+        <item>Exceed</item>
+    </string-array>
+    <string-array name="car_variant_Mitsubishi_Hiace">
+        <item>L300</item>
+    </string-array>
+    <string-array name="car_variant_Mitsubishi_Lancer">
+        <item>Gl</item>
+        <item>GLX</item>
+    </string-array>
+    <string-array name="car_variant_Mitsubishi_Pajero">
+        <item>Exceed</item>
+    </string-array>
+    <string-array name="car_variant_Nissan_350_Z">
+        <item>FairLady</item>
+    </string-array>
+    <string-array name="car_variant_Nissan_AD_Van">
+        <item>DX</item>
+        <item>GX</item>
+    </string-array>
+    <string-array name="car_variant_Nissan_Clipper">
+        <item>AXIS</item>
+        <item>E Aero</item>
+        <item>E Four</item>
+        <item>G</item>
+        <item>G Aero</item>
+    </string-array>
+    <string-array name="car_variant_Nissan_Dayz">
+        <item>J</item>
+        <item>S</item>
+        <item>X</item>
+        <item>Bolero J</item>
+        <item>Bolero S</item>
+        <item>Bolero X</item>
+    </string-array>
+    <string-array name="car_variant_Nissan_Juke">
+        <item>15RS</item>
+        <item>15RX</item>
+    </string-array>
+    <string-array name="car_variant_Nissan_Sunny">
+        <item>EX Salon</item>
+        <item>GL</item>
+        <item>IDLX</item>
+        <item>JX</item>
+        <item>LX</item>
+        <item>Super Saloon</item>
+    </string-array>
+    <string-array name="car_variant_Proton_Saga">
+        <item>Proton saga 1.3L Standard M/T</item>
+        <item>Proton saga 1.3L Standard A/T</item>
+        <item>Proton saga 1.3L Ace A/T</item>
+    </string-array>
+    <string-array name="car_variant_Proton_X70">
+        <item>Proton X70 Executive AWD</item>
+        <item>Proton X70 Premium FWD</item>
+    </string-array>
+    <string-array name="car_variant_Prince_K07">
+        <item>Standard</item>
+    </string-array>
+    <string-array name="car_variant_Prince_Pearl">
+        <item>MT</item>
+    </string-array>
+    <string-array name="car_variant_Rolls_Royce_Phantom">
+        <item>Series II</item>
+        <item>Extended Wheelbase</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_APV">
+        <item>GLX</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Alto">
+        <item>VX</item>
+        <item>VXR</item>
+        <item>VXL</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Baleno">
+        <item>GL</item>
+        <item>GLi</item>
+        <item>GLi P</item>
+        <item>JXR</item>
+        <item>GXi</item>
+        <item>JXl</item>
+        <item>GTi</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Bolan">
+        <item>VX</item>
+        <item>GL</item>
+        <item>VX Euro II</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Ciaz">
+        <item>Alpha</item>
+        <item>Alpha AT</item>
+        <item>Delta</item>
+        <item>Delta AT</item>
+        <item>Sigma</item>
+        <item>Zeta</item>
+        <item>Zeta AT</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Cultus">
+        <item>VX</item>
+        <item>VXR</item>
+        <item>VXRi</item>
+        <item>VXLi</item>
+        <item>Euro II</item>
+        <item>Limited Edition</item>
+        <item>AGS</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Every">
+        <item>GA</item>
+        <item>Join</item>
+        <item>Join Turbo</item>
+        <item>PA</item>
+        <item>PC</item>
+        <item>PU</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Khyber">
+        <item>GA</item>
+        <item>Limited Edition</item>
+        <item>Plus</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Liana">
+        <item>AXi</item>
+        <item>LXi</item>
+        <item>RXi</item>
+        <item>Eminent</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Margalla">
+        <item>GL</item>
+        <item>GLX</item>
+        <item>GL Plus</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Mehran">
+        <item>VX</item>
+        <item>VXR</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Ravi">
+        <item>Std VX</item>
+        <item>Euro II</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Swift">
+        <item>DX</item>
+        <item>DLX</item>
+    </string-array>
+    <string-array name="car_variant_Suzuki_Wagon_R">
+        <item>VX</item>
+        <item>VXR</item>
+        <item>VXL</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Aqua">
+        <item>G</item>
+        <item>G GR Sports</item>
+        <item>G Sports</item>
+        <item>L</item>
+        <item>S</item>
+        <item>X Urban</item>
+        <item>Crossover</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Coaster">
+        <item>Base</item>
+        <item>Salon</item>
+        <item>Grand Launch</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Corolla">
+        <item>DX</item>
+        <item>GL</item>
+        <item>GLi</item>
+        <item>GLi Special Edition</item>
+        <item>GLi VVTi</item>
+        <item>GLi VVTi Ecotec</item>
+        <item>GLi VVTi Special Edition</item>
+        <item>GLi VVTi Limited Edition</item>
+        <item>LX Limited</item>
+        <item>SE</item>
+        <item>SE Limited</item>
+        <item>SE Salon</item>
+        <item>G</item>
+        <item>XE</item>
+        <item>XE Limited</item>
+        <item>XL</item>
+        <item>2.0D</item>
+        <item>2.0 D Salon</item>
+        <item>2.0 D special Edition</item>
+        <item>2.0 D Limited</item>
+        <item>2.0 D Salon SR</item>
+        <item>Corolla X</item>
+        <item>XLi</item>
+        <item>XLi VVTi</item>
+        <item>XLi VVTi Ecotec</item>
+        <item>XLi VVTi Limited</item>
+        <item>Altis</item>
+        <item>Altis Cruistronic</item>
+        <item>Altis SR</item>
+        <item>Altis SR Cruistronic</item>
+        <item>Altis CVT-i</item>
+        <item>Altis Grande</item>
+        <item>Altis Grande CVT-i</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Corolla_Axio">
+        <item>G</item>
+        <item>X</item>
+        <item>X Special Edition</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Corolla_Fielder">
+        <item>G</item>
+        <item>X</item>
+        <item>Luxel</item>
+        <item>Luxel G Edition</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Crown">
+        <item>Athlete</item>
+        <item>Athlete G Package</item>
+        <item>Athlete S Package</item>
+        <item>Royal</item>
+        <item>Royal Salon</item>
+        <item>Royal Salon G</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Fortuner">
+        <item>VVTi</item>
+        <item>Sigma 4</item>
+        <item>Legender</item>
+        <item>GR-S</item>
+        <item>G</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Hiace">
+        <item>DX</item>
+        <item>GL</item>
+        <item>Grand Cabin</item>
+        <item>High Roof</item>
+        <item>TRH 214</item>
+        <item>TRH 224</item>
+        <item>High Roof Business Class</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Hilux">
+        <item>Revo G</item>
+        <item>Revo V</item>
+        <item>Vigo G</item>
+        <item>Vigo V</item>
+        <item>Vigo Champ G</item>
+        <item>Vigo Champ V</item>
+        <item>Vigo Champ GX</item>
+        <item>Double Cab</item>
+        <item>D-4D</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Land_Cruiser">
+        <item>VX</item>
+        <item>VX Limited</item>
+        <item>Cygnus</item>
+        <item>ZX</item>
+        <item>AX</item>
+        <item>AX G</item>
+        <item>V8</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Mark_X">
+        <item>250G</item>
+        <item>300G</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Noah">
+        <item>S</item>
+        <item>S G Edition</item>
+        <item>X G Edition</item>
+        <item>XL Selection</item>
+        <item>X Smart Edition </item>
+        <item>X Special Edition </item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Passo">
+        <item>G</item>
+        <item>+Hana</item>
+        <item>X</item>
+        <item>XS</item>
+        <item>G F Package</item>
+        <item>X F Package</item>
+        <item>X G Package</item>
+        <item>X V Package</item>
+        <item>X L Package</item>
+        <item>X L Package S</item>
+        <item>Moda</item>
+        <item>Moda G</item>
+        <item>Moda S</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Platz">
+        <item>F</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Prado">
+        <item>TX</item>
+        <item>TZ</item>
+        <item>VX</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Premio">
+        <item>F</item>
+        <item>F EX</item>
+        <item>FL</item>
+        <item>G</item>
+        <item>G EX</item>
+        <item>X</item>
+        <item>X EX</item>
+        <item>XL</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Prius">
+        <item>EX</item>
+        <item>G</item>
+        <item>S</item>
+        <item>A</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Probox">
+        <item>F</item>
+        <item>F Extra Package</item>
+        <item>F Extra Package Limited</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Rush">
+        <item>G</item>
+        <item>G Limited</item>
+        <item>G L Package</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Surf">
+        <item>SSR-G</item>
+        <item>SSR-X</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Tundra">
+        <item>5.7i</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Vitz">
+        <item>F</item>
+        <item>FL</item>
+        <item>RS</item>
+        <item>B</item>
+        <item>iLL</item>
+        <item>U</item>
+        <item>F Intelligent package</item>
+        <item>F Limited</item>
+        <item>F Limited II</item>
+        <item>F Smile Edition</item>
+        <item>Jewala</item>
+        <item>Jewala Smart Stop Package</item>
+    </string-array>
+    <string-array name="car_variant_Toyota_Yaris">
+        <item>GLi</item>
+        <item>ATIV</item>
+        <item>ATIV X</item>
+    </string-array>
+    <string-array name="car_variant_United_Alpha">
+        <item>United Alpha 1.0 Manual</item>
+    </string-array>
+    <string-array name="car_variant_United_Bravo">
+        <item>Base Grade</item>
+    </string-array>
+
+
+    <string-array name="engine_capacity_audi_A3">
+        <item>1200 cc</item>
+        <item>1400 cc</item>
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_audi_A4_A5">
+        <item>1400 cc</item>
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_audi_A6">
+        <item>1800 cc</item>
+        <item>2000 cc</item>
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_audi_Q7">
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_audi_e_tron">
+        <item>3000 cc</item>
+        <item>3500 cc</item>
+        <item>4000 cc</item>
+        <item>5000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_audi_e_tron_GT">
+        <item>523 hp</item>
+    </string-array>
+    <string-array name="engine_capacity_audi_e_tron_GT_RS">
+        <item>637 hp</item>
+    </string-array>
+    <string-array name="engine_capacity_BMW_3_series">
+        <item>1300 cc</item>
+        <item>1600 cc</item>
+        <item>1800 cc</item>
+        <item>2000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_BMW_5_series">
+        <item>2000 cc</item>
+        <item>2500 cc</item>
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_BMW_7_series">
+        <item>3000 cc</item>
+        <item>3600 cc</item>
+        <item>4400 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_BMW_X1_or_honda_vezel">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_BMW_X5_series">
+        <item>2000 cc</item>
+        <item>3000 cc</item>
+        <item>4400 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_DFSK_C37_or_changan_alsvin_or_honda_city">
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_chery_or_changan_karvaan_M9">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_DFSK_glory_or_honda_airwave">
+        <item>1500 cc</item>
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_daihatsu_atrai_wagon_or_copen_or_hijet_or_mira_or_move_or_move_conte_or_honda_N_One_Wagon_or_mazda_scrum_or_mitsubishi_EK_wagon_pajero_mini_or_nissan_clipper_dayz">
+        <item>660 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_daihatsu_bego_or_honda_BRV_CRZ_Fit_or_MG_HS_or_nissan_juke">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_daihatsu_cuore">
+        <item>800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_daewoo_or_higer_or_yutong_Standard">
+        <item>--</item>
+    </string-array>
+    <string-array name="engine_capacity_FAW_V2">
+        <item>1300 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_FAW_XPV">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_GMC">
+        <item>6200 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_haval">
+        <item>1497 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_honda_accord">
+        <item>2000 cc</item>
+        <item>2400 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_honda_civic">
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+        <item>1600 cc</item>
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_hyundai_elantra">
+        <item>1600 cc</item>
+        <item>2000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_hyundai_grand_starex">
+        <item>2400 cc</item>
+        <item>2500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_hyundai_santro">
+        <item>1000 cc</item>
+        <item>1100 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_hyundai_shehzore">
+        <item>2600 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_hyundai_sonata">
+        <item>1999 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_hyundai_tucson">
+        <item>2000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_isuzu">
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_JW">
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_KIA_carnival">
+        <item>3300 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_KIA_picanto">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_KIA_spectra">
+        <item>1500 cc</item>
+        <item>1600 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_KIA_sportage">
+        <item>2000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_KIA_stonic">
+        <item>1400 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_land_rover">
+        <item>2000 cc</item>
+        <item>2700 cc</item>
+        <item>3000 cc</item>
+        <item>4000 cc</item>
+        <item>4200 cc</item>
+        <item>4400 cc</item>
+        <item>5000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_lexus_CT200h">
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_lexus_LX_series">
+        <item>4700 cc</item>
+        <item>5700 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_lexus_RX_series">
+        <item>3500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_mercedes_benz_C_class">
+        <item>1600 cc</item>
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_mercedes_benz_E_class">
+        <item>1500 cc</item>
+        <item>1800 cc</item>
+        <item>2000 cc</item>
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_mercedes_benz_panther">
+        <item>1800 cc</item>
+        <item>2400 cc</item>
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_mercedes_benz_S_class">
+        <item>2800 cc</item>
+        <item>3000 cc</item>
+        <item>3200 cc</item>
+        <item>3500 cc</item>
+        <item>5500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_MG_ZS">
+        <item>1490 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_MG_ZS_EV">
+        <item>141 hp</item>
+    </string-array>
+    <string-array name="engine_capacity_Mazda_B2200">
+        <item>2200 cc</item>
+        <item>2500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Mazda_RX8">
+        <item>1300 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Mitsubishi_hiace">
+        <item>2200 cc</item>
+        <item>2400 cc</item>
+        <item>2800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Mitsubishi_lancer">
+        <item>1300 cc</item>
+        <item>1600 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Mitsubishi_pajero">
+        <item>2400 cc</item>
+        <item>2500 cc</item>
+        <item>2800 cc</item>
+        <item>3500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_nissan_350_Z">
+        <item>3600 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_nissan_AD_van_sunny">
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_proton_saga">
+        <item>1299 cc</item>
+        <item>1332 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_proton_X70">
+        <item>1470 cc</item>
+        <item>1477 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_prince_K07">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_prince_pearl">
+        <item>800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_rolls_royce">
+        <item>6749 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_APV">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Alto">
+        <item>660 cc</item>
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Baleno">
+        <item>1300 cc</item>
+        <item>1600 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Bolan">
+        <item>800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Ciaz">
+        <item>1400 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Cultus">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Every">
+        <item>660 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Khyber">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Liana">
+        <item>1300 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Margalla">
+        <item>1300 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Mehran">
+        <item>800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Ravi">
+        <item>800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Swift">
+        <item>1000 cc</item>
+        <item>1200 cc</item>
+        <item>1300 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Suzuki_Wagon_R">
+        <item>660 cc</item>
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Aqua">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Corolla">
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+        <item>1600 cc</item>
+        <item>1800 cc</item>
+        <item>2000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Corolla_Axio">
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Corolla_Fielder">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Crown">
+        <item>2000 cc</item>
+        <item>2500 cc</item>
+        <item>3000 cc</item>
+        <item>3500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Fortuner">
+        <item>2700 cc</item>
+        <item>2800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Hiace">
+        <item>2755 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Hilux">
+        <item>2800 cc</item>
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Land_Cruiser">
+        <item>4200 cc</item>
+        <item>4500 cc</item>
+        <item>4600 cc</item>
+        <item>4700 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Mark_X">
+        <item>2500 cc</item>
+        <item>3000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Noah">
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Passo">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Platz">
+        <item>1000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Prado">
+        <item>2700 cc</item>
+        <item>3000 cc</item>
+        <item>4000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Premio">
+        <item>1500 cc</item>
+        <item>1800 cc</item>
+        <item>2000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Prius">
+        <item>1500 cc</item>
+        <item>1800 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Probox">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Coaster">
+        <item>4009 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Rush">
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Surf">
+        <item>2700 cc</item>
+        <item>3000 cc</item>
+        <item>3400 cc</item>
+        <item>4000 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Tundra">
+        <item>5700 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Vitz">
+        <item>1000 cc</item>
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_Toyota_Yaris">
+        <item>1300 cc</item>
+        <item>1500 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_United_Alpha">
+        <item>993 cc</item>
+    </string-array>
+    <string-array name="engine_capacity_United_Bravo">
+        <item>800 cc</item>
+    </string-array>
+
+
+    <string-array name="car_type_sedan_sports">
+        <item>Sedan</item>
+        <item>Sports Car</item>
+    </string-array>
+    <string-array name="car_type_SUV_sports">
+        <item>SUV</item>
+        <item>Sports Car</item>
+    </string-array>
+    <string-array name="car_type_sports">
+        <item>Sports Car</item>
+    </string-array>
+    <string-array name="car_type_Crossover_sports">
+        <item>Crossover</item>
+        <item>Sports Car</item>
+    </string-array>
+    <string-array name="car_type_sedan">
+        <item>Sedan</item>
+    </string-array>
+    <string-array name="car_type_pickup_truck">
+        <item>Pickup Truck</item>
+    </string-array>
+    <string-array name="car_type_Van">
+        <item>Van</item>
+    </string-array>
+    <string-array name="car_type_compact_SUV">
+        <item>Compact SUV</item>
+    </string-array>
+    <string-array name="car_type_bus">
+        <item>Bus</item>
+    </string-array>
+    <string-array name="car_type_mini_van">
+        <item>Mini Van</item>
+    </string-array>
+    <string-array name="car_type_Hatchback">
+        <item>Hatchback</item>
+    </string-array>
+    <string-array name="car_type_SUV">
+        <item>SUV</item>
+    </string-array>
+    <string-array name="car_type_crossover_SUV">
+        <item>Crossover</item>
+        <item>SUV</item>
+    </string-array>
+    <string-array name="car_type_station_wagon">
+        <item>Station Wagon</item>
+    </string-array>
+    <string-array name="car_type_crossover">
+        <item>Crossover</item>
+    </string-array>
+    <string-array name="car_type_pickup_loader">
+        <item>Pickup Loader</item>
+    </string-array>
+    <string-array name="car_type_mini_bus">
+        <item>Mini Bus</item>
+    </string-array>
+
+
+    <string-array name="registration_city">
+        <item>Lahore</item>
+        <item>Faisalabad</item>
+        <item>Multan</item>
+        <item>Rawalpindi</item>
+        <item>Islamabad</item>
+        <item>Karachi</item>
+        <item>Hyderabad</item>
+        <item>Peshawar</item>
+        <item>Quetta</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="insurance">
+        <item>Select Insurance Status</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+
+    <string-array name="driver_availability">
+        <item>Only with Driver</item>
+        <item>Driver on Demand</item>
+        <item>Without Driver</item>
+    </string-array>
+
+
+    <string-array name="seating_capacity_5">
+        <item>5</item>
+    </string-array>
+    <string-array name="seating_capacity_7">
+        <item>7</item>
+    </string-array>
+    <string-array name="seating_capacity_5_6_7">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="seating_capacity_2">
+        <item>2</item>
+    </string-array>
+    <string-array name="seating_capacity_11">
+        <item>11</item>
+    </string-array>
+    <string-array name="seating_capacity_12">
+        <item>12</item>
+    </string-array>
+    <string-array name="seating_capacity_12_14">
+        <item>12</item>
+        <item>14</item>
+    </string-array>
+    <string-array name="seating_capacity_4">
+        <item>4</item>
+    </string-array>
+    <string-array name="seating_capacity_8">
+        <item>8</item>
+    </string-array>
+    <string-array name="seating_capacity_15">
+        <item>15</item>
+    </string-array>
+    <string-array name="seating_capacity_4_5">
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="seating_capacity_30_45">
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+    <string-array name="seating_capacity_26_30">
+        <item>26</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="seating_capacity_5_7_8">
+        <item>5</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
+    <string-array name="car_varient_ghost">
+        <item>Ghost</item>
+        <item>Ghost Extended Wheelbase</item>
+        <item>Ghost Black Badge</item>
+        <item>Zenith Collection(Limited Edition)</item>
+    </string-array>
+
+    <string-array name="engine_capacity_ghost">
+        <item>6600 cc</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".home.HomeCarType">
+
+    <TextView
+        android:id="@+id/tvCarTypeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:text="@string/car_go"
+        android:textColor="@color/app_theme_color"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCarTypeResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:text="@string/result_s"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tvResultsCount"
+        app:layout_constraintTop_toBottomOf="@+id/tvCarTypeName" />
+
+    <TextView
+        android:id="@+id/tvResultsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/product_sans_regular"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCarTypeResults"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvCarTypeResults" />
+
+    <ImageView
+        android:id="@+id/ivSort"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/sort"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCarTypeResults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvCarTypeResults"
+        app:tint="@color/dummy_black" />
+
+    <TextView
+        android:id="@+id/tvSortArray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product_sans_regular"
+        android:paddingEnd="@dimen/_20sdp"
+        android:text="@string/sort"
+        android:textColor="@color/hint_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSort"
+        app:layout_constraintEnd_toEndOf="@+id/ivSort"
+        app:layout_constraintTop_toTopOf="@+id/ivSort"
+        tools:ignore="RtlSymmetry" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultsCount">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/rv_shimmer_layout">
+            </include>
+
+            <include
+                layout="@layout/rv_shimmer_layout">
+            </include>
+
+            <include
+                layout="@layout/rv_shimmer_layout">
+            </include>
+
+            <include
+                layout="@layout/rv_shimmer_layout">
+            </include>
+
+            <include
+                layout="@layout/rv_shimmer_layout">
+            </include>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCarTypeSearch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResultsCount"
+        tools:itemCount="3"
+        tools:listitem="@layout/rv_search_item" />
+
+        <TextView
+            android:id="@+id/tvAdsNotAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/product_sans_regular"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textAlignment="center"
+            android:textColor="@color/my_hint"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCarTypeResults" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

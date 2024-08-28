@@ -1,0 +1,127 @@
+<resources>
+
+    <style name="Base.Theme.FYP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="floatingActionButtonStyle">@style/FloatingActionButtonStyle</item>
+
+        <!--<item name="android:statusBarColor">@color/app_theme_color</item>
+        <item name="android:navigationBarColor">@color/app_theme_color</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>-->
+    </style>
+
+    <style name="Theme.FYP" parent="Base.Theme.FYP" />
+
+    <!--<style name="Theme" parent="android:Theme.Material.Wallpaper.NoTitleBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>-->
+
+    <style name="boardingTopDesign">
+        <item name="android:layout_height">@dimen/_130sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:src">@drawable/design_one</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:scaleX">1.3</item>
+        <item name="android:scaleY">2</item>
+    </style>
+
+    <style name="boardingBottomDesign">
+        <item name="android:layout_height">@dimen/_350sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:src">@drawable/design_two</item>
+        <item name="android:scaleType">fitEnd</item>
+        <item name="android:scaleX">1.05</item>
+        <item name="android:scaleY">1.3</item>
+    </style>
+
+    <style name="boardingCars">
+        <item name="android:layout_height">@dimen/_130sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="boldText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="fontFamily">@font/product_sans_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="simpleText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="fontFamily">@font/product_sans_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="SpecificCornerRounded">
+        <item name="cornerSizeBottomRight">@dimen/_15sdp</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">@dimen/_15sdp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
+
+    <style name="FloatingActionButtonStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/FabRoundedShape</item>
+    </style>
+
+    <style name="FabRoundedShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="NetworkAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/network_dialog_bg</item>
+    </style>
+
+    <style name="AnimationForDialog">
+        <item name="android:windowEnterAnimation">@anim/alert_dialog_zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/alert_dialog_zoom_out</item>
+    </style>
+
+    <style name="SlideLeftRightDialog">
+        <item name="android:windowEnterAnimation">@anim/enter_from_right</item>
+        <item name="android:windowExitAnimation">@anim/exit_to_left</item>
+    </style>
+
+    <style name="SpinnerTheme">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="CustomNumberPickerStyle" >
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomSearchStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_color</item>
+        <item name="android:fontFamily">@font/product_sans_regular</item>
+    </style>
+
+    <style name="BottomSheetDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/app_theme_color</item>
+    </style>
+
+
+
+</resources>

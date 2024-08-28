@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Boarding.OnBoardingOne">
+
+    <ImageView
+        android:id="@+id/design_one"
+        style="@style/boardingTopDesign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tabIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/design_one" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/boardingBottomDesign"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:backgroundTint="@color/app_theme_color"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="@string/get_started"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:cornerRadius="@dimen/_15sdp"
+        android:fontFamily="@font/product_sans_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/tabIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@null"
+        app:tabIndicator="@null"
+        app:tabIndicatorHeight="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/skip_to_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabRippleColor="@null" />
+
+    <ImageView
+        android:id="@+id/skip_to_next"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:background="@drawable/load_boarding_screen"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/skip_to_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSkip"
+        style="@style/simpleText"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/skip"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/skip_to_next"
+        app:layout_constraintStart_toStartOf="@+id/skip_to_next"
+        app:layout_constraintTop_toBottomOf="@+id/skip_to_next" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
