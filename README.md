@@ -1,6 +1,6 @@
 # Car Go
 
-<img alt = "QuotesApp Logo" src="https://github.com/user-attachments/assets/30297d2f-b914-4783-8c42-742e143bec45" height="150px" width="150px" align="right"/>
+<img alt = "QuotesApp Logo" src="https://raw.githubusercontent.com/HaroonBsf/CarGo-RentalServiceApp/master/images/cargo_icon-modified.png?token=GHSAT0AAAAAACV2F7UGVERE6KJNDNUKI5L4ZWTTQSA" height="150px" width="150px" align="right"/>
 
 ![Car Go UI-1-2](https://github.com/user-attachments/assets/4b618a8a-a3ed-4c6e-a25b-356cc2824747)
 
