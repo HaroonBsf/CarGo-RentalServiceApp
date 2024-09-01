@@ -43,6 +43,7 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 - WhatsApp Chat with Renter
 - Upload and update dates of ads
 - Ad Sorting
+- Search by Car Type
 - In-app tips for a better user experience
 - Update Profile
 - Set Car Insurance
