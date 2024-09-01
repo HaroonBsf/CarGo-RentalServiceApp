@@ -11,20 +11,45 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 > We welcome your suggestions for new features or improvements—feel free to share your feedback! 😃
 
 ## 🚀 Key Features
-- **Firebase Authentication:** Phone and email authentication with OTP verification.
-- **Account Management:** Users can create accounts as individuals or companies and switch between account types.
+- **Firebase Authentication:**
+  - Email authentication.
+  - Phone authentication with OTP verification.
+- **Account Management:**
+  - Users can create accounts as individuals or companies.
+  - Users can switch between account types.
 - **Car Details:** View details of available cars.
-- **Contact Renter:** Direct contact with the car renter (company).
-- **Real-Time Chat:** Chat with renters using Firebase Realtime Database.
-- **Help & Support:** Access help and support from the app.
-- **Location-Based Ads:** Find available ads in the user’s city (nearest ads).
+- **Contact Renter:**
+  - Direct contact with the car renter (company).
+  - Chat with renters using Firebase Realtime Database.
+- **Help & Support:**
+  - Access help and support from the app
+    - Dial support directly.
+    - Send support inquiries via email.
+    - Chat with support on WhatsApp.
+- **User Guidance:** Show hints to guide users on how to use the app effectively.
+- **Nearest Ads:** Find available ads in the user’s city (nearest ads).
 - **Booking Status:** Check cars currently in the booking state.
-- **Search Functionality:** Search for desired cars for online booking.
-- **Location Update:** Update user location.
-- **Ad Management:** Companies can upload, update, and delete ads.
-- **Real-Time Tracking:** Companies can track users’ real-time locations.
+- **Search Functionality:**
+  - Search for desired cars for online booking.
+  - Users can search for cars from all vehicles, nearest vehicles, and booked vehicles.
+- **Location Update:**
+  - Users can update their location with a single click.
+  - This helps to find the nearest ads more accurately.
+- **Ad Management:**
+  - Companies can upload ads.
+  - Companies can update ads.
+  - Companies can delete ads.
+- **Real-Time Tracking:**
+  - Companies can track users’ real-time locations.
 
 ## 🔥 Additional Features
+
+- Premium & Responsive UI
+- Direct Call to Renter
+- WhatsApp Chat with Renter
+- Upload and update dates of ads
+- Ad Sorting
+- In-app tips for a better user experience
 
 
 ## Screenshots
