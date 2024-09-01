@@ -11,36 +11,27 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 > We welcome your suggestions for new features or improvements—feel free to share your feedback! 😃
 
 ## 🚀 Key Features
-- **Firebase Authentication:**
-  - Email authentication.
-  - Phone authentication with OTP verification.
-- **Account Management:**
-  - Users can create accounts as individuals or companies.
-  - Users can switch between account types.
-- **Car Details:** View details of available cars.
-- **Contact Renter:**
-  - Direct contact with the car renter (company).
-  - Chat with renters using Firebase Realtime Database.
-- **Help & Support:**
-  - Access help and support from the app
-    - Dial support directly.
-    - Send support inquiries via email.
-    - Chat with support on WhatsApp.
-- **User Guidance:** Show hints to guide users on how to use the app effectively.
-- **Nearest Ads:** Find available ads in the user’s city (nearest ads).
-- **Booking Status:** Check cars currently in the booking state.
-- **Search Functionality:**
-  - Search for desired cars for online booking.
-  - Users can search for cars from all vehicles, nearest vehicles, and booked vehicles.
-- **Location Update:**
-  - Users can update their location with a single click.
-  - This helps to find the nearest ads more accurately.
-- **Ad Management:**
-  - Companies can upload ads.
-  - Companies can update ads.
-  - Companies can delete ads.
-- **Real-Time Tracking:**
-  - Companies can track users’ real-time locations.
+- **Firebase Email Authentication**
+- **Firebase Phone Authentication**
+- **Create Accounts as Individuals or Companies**
+- **Switch between account types**
+- **View details of available cars**
+- **Real-time Chat with Renters**
+- **Help & Support**
+- **Find Nearest Ads**
+- **Current Booking Status(View cars that are currently booked)**
+- **Search Functionality(Search for Cars from All, Nearest, and Booked vehicles)**
+- **Location Update with a Single Click**
+- **Upload Ads:**
+  - City list of Pakistan(CallCourier API)
+  - Dynamic Car Details
+    - For each car type or model selection, the UI automatically updates to show available colors, transmission options, engine types, variants, and engine capacities.
+- **Update Ads**
+- **Delete Ads**
+- **Set/Update the Car booking Status**
+- **Real-Time Car Tracking:**
+  - Utilizes Google Maps API for accurate location tracking.
+  - Track the location of cars when they are booked.
 
 ## 🔥 Additional Features
 
@@ -50,6 +41,9 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 - Upload and update dates of ads
 - Ad Sorting
 - In-app tips for a better user experience
+- Update Profile
+- Set Car Insurance
+- Add Car Features
 
 
 ## Screenshots
