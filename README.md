@@ -4,7 +4,7 @@
 
 ![Car Go UI-1](https://raw.githubusercontent.com/HaroonBsf/CarGo-RentalServiceApp/master/images/Car%20Go%20UI-1.png?token=GHSAT0AAAAAACV2F7UGNLMPQ7BNQDTOJLKGZWUTJ7Q)
 
-![Car Go UI-2](https://github.com/user-attachments/assets/862d7ca3-5a6e-4ece-b8bb-55547a61bd87)
+![Car Go UI-2](https://raw.githubusercontent.com/HaroonBsf/CarGo-RentalServiceApp/master/images/Car%20Go%20UI-2.png?token=GHSAT0AAAAAACV2F7UHHQ3NEZK55TSAPJWOZWUTPKQ)
 
 ![Car Go UI-3](https://github.com/user-attachments/assets/76d2c3c5-203a-44c3-ac31-ee56f72d9fa8)
 
