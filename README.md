@@ -18,6 +18,7 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 - **View details of available cars**
 - **Real-time Chat with Renters**
 - **Help & Support**
+- **User Guidance**
 - **Find Nearest Ads**
 - **Current Booking Status(View cars that are currently booked)**
 - **Search Functionality(Search for Cars from All, Nearest, and Booked vehicles)**
@@ -25,8 +26,10 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 - **Upload Ads:**
   - City list of Pakistan(CallCourier API)
   - Dynamic Car Details
-    - For each car type or model selection, the UI automatically updates to show available colors, transmission options, engine types, variants, and engine capacities.
-- **Update Ads**
+    - For each car make or model selection, the UI automatically updates to show available colors, transmission options, engine types, variants, car types, seating capacity, and engine capacities.
+- **Update Ads:**
+  - Instant Real-Time Updates
+    - Get live updates for car locations, booking statuses, ad changes, and UI adjustments.
 - **Delete Ads**
 - **Set/Update the Car booking Status**
 - **Real-Time Car Tracking:**
