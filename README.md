@@ -12,7 +12,7 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 
 ## 🚀 Key Features
 - **Email Authentication**
-- **Firebase Phone Authentication**
+- **Phone Authentication**
 - **Create Accounts as Individuals or Companies**
 - **Switch between account types**
 - **View details of available cars**
