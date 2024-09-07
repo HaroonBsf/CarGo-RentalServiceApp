@@ -63,8 +63,8 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 ##    Download Installers
 - **APK File:** Download the latest APK file of this project and don't forget to provide your valuable feedback. 😃
 
-<p align="center">
-  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/3fe1b9cb-1aaa-4e5d-9bd2-96720a75b1e1"  height="360px" width="360px" /> 
+<p align="start">
+  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/18122b2d-ed8e-4c46-abc1-4e416ef6558b" height="360px"  /> 
 </p>
 
 
