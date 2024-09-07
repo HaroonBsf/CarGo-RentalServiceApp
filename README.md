@@ -65,11 +65,8 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 Explore a variety of feature previews that highlight the key functionalities of the Car Go app. From account switching to real-time tracking, each preview provides a visual guide to enhance user understanding and experience.
 
 ### Switch Account:
-This feature allows users to switch from an individual to a company account. With the company account, users can upload and manage car ads effortlessly, ensuring a smooth experience for both renters and advertisers.
-
-#### Key Benefits:
-- Seamless Transition: Switch from individual to company account without any hassle.
-- Ad Management: Company accounts can upload, edit, and manage car ads efficiently.
+- Users can switch from an individual account to a company account.
+- With the company account, users can effortlessly upload and manage car ads, ensuring a smooth experience for both renters and advertisers.
 
 <p align="start">
   <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/18122b2d-ed8e-4c46-abc1-4e416ef6558b" height="360px"  /> 
