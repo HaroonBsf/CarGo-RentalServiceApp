@@ -66,7 +66,7 @@ Explore a variety of feature previews that highlight the key functionalities of 
 
 ### Switch Account:
 - Users can switch from an individual account to a company account.
-- With the company account, users can effortlessly upload and manage car ads, ensuring a smooth experience for both renters and advertisers.
+- Users can effortlessly upload and manage car ads with the company account.
 
 <p align="start">
   <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/18122b2d-ed8e-4c46-abc1-4e416ef6558b" height="360px"  /> 
