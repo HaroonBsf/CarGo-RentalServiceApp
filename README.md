@@ -72,6 +72,12 @@ Explore a variety of feature previews that highlight the key functionalities of 
   <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/18122b2d-ed8e-4c46-abc1-4e416ef6558b" height="360px"  /> 
 </p>
 
+<p align="start">
+  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/993a10df-f394-4d1a-81e1-b66036233428" height="360px"  /> 
+  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/0fbc3c0b-31a2-4fe2-b845-42b2454e3877" height="360px"  /> 
+</p>
+
+
 
 ##    Download Installers
 - **APK File:** Download the latest APK file of this project and don't forget to provide your valuable feedback. 😃
