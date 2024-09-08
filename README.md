@@ -73,10 +73,9 @@ Explore a variety of feature previews that highlight the key functionalities of 
 </p>
 
 <p align="start">
-  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/993a10df-f394-4d1a-81e1-b66036233428" height="360px"  /> 
-  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/0fbc3c0b-31a2-4fe2-b845-42b2454e3877" height="360px"  /> 
+  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/7ebeffab-eb58-450f-84b5-0096ddd65f75" height="360px"  /> 
+  <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/fb2f5e00-8e19-4bd8-9e81-8e67459dc091" height="360px"  /> 
 </p>
-
 
 
 ##    Download Installers
