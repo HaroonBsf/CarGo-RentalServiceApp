@@ -65,12 +65,19 @@ Car Go is an Android app developed in Android Studio, primarily using Java, Fire
 Explore a variety of feature previews that highlight the key functionalities of the Car Go app. From account switching to real-time tracking, each preview provides a visual guide to enhance user understanding and experience.
 
 ### Switch Account:
-- Users can switch from an individual account to a company account.
-- Users can effortlessly upload and manage car ads with the company account.
+- Click on `My Ads` to access your account information.
+- Select `Switch` to initiate the account conversion.
+- Enter your company name to convert your user account into a company account.
 
 <p align="start">
   <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/18122b2d-ed8e-4c46-abc1-4e416ef6558b" height="360px"  /> 
 </p>
+
+### Real-Time Car Tracking:
+- Click on the car ad you wish to track.
+- If the car is booked, select `Start Tracking` to begin the process.
+- Receive an **OTP** and enter it into the driver’s app who has your car.
+- Once the OTP is successfully entered, the renter is automatically navigated to the tracking screen for real-time monitoring of the vehicle.
 
 <p align="start">
   <img title="Demo" alt="Switch Account Demo" src="https://github.com/user-attachments/assets/7ebeffab-eb58-450f-84b5-0096ddd65f75" height="360px"  /> 
