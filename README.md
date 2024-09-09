@@ -76,7 +76,7 @@ Explore a variety of feature previews that highlight the key functionalities of 
 ### Real-Time Car Tracking:
 - Click on the car ad you wish to track.
 - If the car is booked, select `Start Tracking` to begin the process.
-- Receive an **OTP** and enter it into the driver’s app who has your car.
+- Receive an **OTP** and enter it into the driver’s app, who wants to rent your car.
 - Once the OTP is successfully entered, the renter is automatically navigated to the tracking screen for real-time monitoring of the vehicle.
 
 <p align="start">
