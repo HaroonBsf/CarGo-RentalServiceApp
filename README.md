@@ -84,6 +84,6 @@ Explore a variety of feature previews that highlight the key functionalities of 
 
 
 ##    Download Installers
-- **APK File:** Download the latest APK file of this project and don't forget to provide your valuable feedback.😃 
+- **APK File:** Download the latest APK file of this project and don't forget to provide your valuable feedback.😃
 
 
