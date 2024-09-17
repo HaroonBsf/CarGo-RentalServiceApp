@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chat.MessagesFragment">
+    tools:context=".chat.TravelFragment">
 
     <fragment
         android:id="@+id/map_main_d"

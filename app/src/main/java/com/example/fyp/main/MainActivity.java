@@ -11,7 +11,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
@@ -27,7 +26,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -67,7 +65,8 @@ import com.example.fyp.ads.MyAdsFragment;
 import com.example.fyp.ads.UpdateAds;
 import com.example.fyp.callback.CallbackData;
 import com.example.fyp.chat.FragmentChatHere;
-import com.example.fyp.chat.MessagesFragment;
+import com.example.fyp.chat.TravelFragment;
+import com.example.fyp.chat.UsersFragment;
 import com.example.fyp.constant.Constant;
 import com.example.fyp.home.HomeCarType;
 import com.example.fyp.home.HomeFragment;
@@ -99,6 +98,7 @@ import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -273,11 +273,11 @@ public class MainActivity extends AppCompatActivity {
                         });
                         return true;
 
-                    } else if (itemId == R.id.help) {
-                        loadFragment(getSupportFragmentManager(), new HelpFragment());
+                    } else if (itemId == R.id.chats) {
+                        loadFragment(getSupportFragmentManager(), new UsersFragment());
                         return true;
                     } else if (itemId == R.id.chat) {
-                        loadFragment(getSupportFragmentManager(), new MessagesFragment());
+                        loadFragment(getSupportFragmentManager(), new TravelFragment());
                         return true;
                     }
                 }
@@ -335,7 +335,10 @@ public class MainActivity extends AppCompatActivity {
 
                     if (id == R.id.settings) {
                         loadFragment(getSupportFragmentManager(), new SettingsFragment());
-                    } else if (id == R.id.privacyPolicy) {
+                    } else if (id == R.id.help) {
+                        loadFragment(getSupportFragmentManager(), new HelpFragment());
+                        NavigationHide();
+                    }else if (id == R.id.privacyPolicy) {
                         loadFragment(getSupportFragmentManager(), new PrivacyPolicy());
                     } else if (id == R.id.invite) {
                         Toast.makeText(MainActivity.this, "Good Luck", Toast.LENGTH_SHORT).show();
@@ -348,6 +351,10 @@ public class MainActivity extends AppCompatActivity {
                         new Handler().postDelayed(() -> {
                             progressBar.setVisibility(View.GONE);
                             view.setVisibility(View.GONE);
+                            FirebaseDatabase.getInstance().getReference("users").
+                                    child(currentUser.getUid()).
+                                    child("status").
+                                    setValue("offline");
                             FirebaseAuth.getInstance().signOut();
 
                             Constant.userData = null;
@@ -360,6 +367,7 @@ public class MainActivity extends AppCompatActivity {
 
                             startActivity(new Intent(getApplicationContext(), LoginScreen.class));
                             finish();
+                            //startActivity(new Intent(getApplicationContext(), LoginScreen.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
 
                         }, 2000);
                         return true;
@@ -654,12 +662,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         sliderHandler.removeCallbacks(sliderRunnable);
+
+        status("offline");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         sliderHandler.postDelayed(sliderRunnable, 5000);
+
+        status("online");
     }
 
     private boolean isLocationEnabled() {
@@ -824,7 +836,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (currentFragment instanceof Login_SignupFragment
                 || currentFragment instanceof MyAdsFragment
                 || currentFragment instanceof HelpFragment
-                || currentFragment instanceof MessagesFragment
+                || currentFragment instanceof UsersFragment
+                || currentFragment instanceof TravelFragment
                 || currentFragment instanceof ProfileFragment
                 || currentFragment instanceof SearchNode
                 || currentFragment instanceof HomeCarType) {
@@ -843,15 +856,22 @@ public class MainActivity extends AppCompatActivity {
                 String fragmentName = backEntry.getName();
                 if ("homeFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("homeFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    Constant.itemGetModel = null;
                     bottomSheetDialog.show();
                     NavigationVisibile();
                     bottomNavigationView.setSelectedItemId(R.id.home);
                     return;
                 } else if ("searchFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("searchFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    Constant.itemGetModel = null;
                     return;
                 } else if ("homeCarTypeFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("homeCarTypeFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    Constant.itemGetModel = null;
+                    return;
+                }else if ("UsersFragment".equals(fragmentName)) {
+                    fragmentManager.popBackStackImmediate("UsersFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    NavigationVisibile();
                     return;
                 }
             }
@@ -878,7 +898,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 2000);
         }
+    }
 
+    private void status(String status){
+        if (currentUser != null) {
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(currentUser.getUid());
+            HashMap<String, Object> hashMap = new HashMap<>();
+            hashMap.put("status", status);
+            reference.updateChildren(hashMap);
+        }
     }
 
 }

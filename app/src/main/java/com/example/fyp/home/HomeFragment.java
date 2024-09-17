@@ -65,7 +65,6 @@ public class HomeFragment extends Fragment {
         rvHomeAllVehiclesAds.setLayoutManager(gridLayoutManager);
         rvHomeAllVehiclesAds.setAdapter(gridAdapter);
 
-
         //item list
         itemList = generateDummyData();
         itemsAdapter = new ItemsAdapter(itemList);

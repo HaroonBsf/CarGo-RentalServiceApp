@@ -75,9 +75,9 @@ dependencies {
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.2'
 
     //Messaging -->notifications
-    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
-    implementation 'com.google.firebase:firebase-messaging:23.4.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.google.firebase:firebase-messaging:24.0.1'
 
     //Shimmer Effect
     implementation 'com.facebook.shimmer:shimmer:0.5.0'

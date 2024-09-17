@@ -210,6 +210,8 @@
     <string name="start_app_tour">Start App Tour</string>
     <string name="nearest">Nearest</string>
     <string name="reserved">Reserved</string>
+    <string name="chats">Chats</string>
+    <string name="last_message">Last message...</string>
     <string-array name="car_make">
         <item>Audi</item>
         <item>BMW</item>

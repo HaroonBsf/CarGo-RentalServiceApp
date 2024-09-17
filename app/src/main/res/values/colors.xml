@@ -15,4 +15,6 @@
     <color name="dummy_hint_color">#CFC6C6</color>
     <color name="transparent_14_percent">#24000000</color>
     <color name="booked_color">#2196F3</color>
+    <color name="online">#05df29</color>
+    <color name="offline">#bfbfbf</color>
 </resources>

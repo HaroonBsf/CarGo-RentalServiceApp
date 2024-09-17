@@ -28,7 +28,7 @@ public class Util {
                     String email = (String) snapshot.child("email").getValue();
                     String cnic = (String) snapshot.child("cnic").getValue();
                     String phone = (String) snapshot.child("phone").getValue();
-                    ReadWriteUserDetails user = new ReadWriteUserDetails(name, cmp, email, cnic, phone);
+                    ReadWriteUserDetails user = new ReadWriteUserDetails(name, cmp, email, cnic, phone, UUID, "offline");
                     callbackData.getUserCallback(user);
                 }
             }

@@ -190,11 +190,10 @@ public class OTPVerification extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
-
-                            ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(name, company, email, CNIC, phone);
+                            String UUID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            ReadWriteUserDetails writeUserDetails = new ReadWriteUserDetails(name, company, email, CNIC, phone, UUID, "offline");
 
                             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("users");
-                            String UUID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                             if (UUID != null) {
                                 databaseReference.child(UUID).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {

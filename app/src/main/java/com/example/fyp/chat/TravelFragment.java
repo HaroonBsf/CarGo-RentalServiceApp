@@ -2,7 +2,6 @@ package com.example.fyp.chat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -21,14 +20,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fyp.R;
 import com.example.fyp.adapters.MessagesAdapter;
-import com.example.fyp.main.MainActivity;
-import com.example.fyp.map.GoogleMapActivity;
 import com.example.fyp.models.ChatModel;
 import com.example.fyp.models.GetAddModel;
 import com.example.fyp.util.SessionManager;
@@ -41,6 +36,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -52,18 +48,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessagesFragment extends Fragment implements OnMapReadyCallback {
+public class TravelFragment extends Fragment implements OnMapReadyCallback {
 
     public static String otp;
-    RecyclerView rvMessages;
-    MessagesAdapter messagesAdapter;
-    List<GetAddModel> mUsers;
-    List<String> usersList;
-    FirebaseUser fuser;
-    List<ChatModel> mChat;
-    List<ChatModel> filterChat = new ArrayList<ChatModel>();
-    List<ChatModel> filterChatTwo = new ArrayList<ChatModel>();
-    DatabaseReference reference;
     LinearLayout llNoMessages;
     TextView msg;
 
@@ -170,119 +157,6 @@ public class MessagesFragment extends Fragment implements OnMapReadyCallback {
                 //startActivity(new Intent(getContext(), GoogleMapActivity.class));
             }
         });
-        //rvMessages = view.findViewById(R.id.rvMessages);
-
-//        rvMessages.setHasFixedSize(true);
-//        rvMessages.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        fuser = FirebaseAuth.getInstance().getCurrentUser();
-
-        usersList = new ArrayList<>();
-
-        reference = FirebaseDatabase.getInstance().getReference("chats");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                usersList.clear();
-
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    ChatModel chat = snapshot.getValue(ChatModel.class);
-
-                    if (chat.getSender().equals(fuser.getUid())) {
-                        usersList.add(chat.getReceiver());
-                    }
-                    if (chat.getReceiver().equals(fuser.getUid())) {
-                        usersList.add(chat.getSender());
-                    }
-                }
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        readMessages();
-
-    }
-
-    private void readMessages() {
-        String myid = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        mChat = new ArrayList<>();
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("chats");
-        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                mChat.clear();
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    ChatModel chat = snapshot.getValue(ChatModel.class);
-                    if (chat.getReceiver().equals(myid) || chat.getSender().equals(myid)) {
-                        mChat.add(chat);
-                    }
-                }
-                seprateTheChats(myid);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-    }
-
-    private void seprateTheChats(String myid) {
-
-        for (int i = 0; i < mChat.size(); i++) {
-            for (int j = 0; j < mChat.size(); j++) {
-                if (mChat.get(i).getSender().equals(mChat.get(j).getSender()) && mChat.get(i).getReceiver().equals(mChat.get(j).getReceiver())) {
-                    filterChat.add(mChat.get(i));
-
-                    Log.e("trueR", mChat.get(i).getMessage());
-                    break;
-                }
-            }
-        }
-
-        seprateUserChat(myid);
-
-    }
-
-    private void seprateUserChat(String myid) {
-
-        for (int i = 0; i < filterChat.size(); i++) {
-            for (int j = 0; j < filterChat.size(); j++) {
-
-                if (myid.equals(filterChat.get(i).getSender()) && filterChat.get(i).getReceiver().equals(filterChat.get(j).getSender()) ||
-                        myid.equals(filterChat.get(i).getReceiver()) && filterChat.get(i).getSender().equals(filterChat.get(j).getReceiver())) {
-
-                    filterChatTwo.add(filterChat.get(i));
-
-                    Log.e("trueR1", filterChat.get(i).getSenderName());
-                    break;
-                }
-            }
-        }
-
-
-        for (int i = 0; i < filterChat.size(); i++) {
-            for (int j = 0; j < filterChat.size(); j++) {
-                String currentId = "";
-                if (!filterChat.get(i).getSender().equals(myid)) {
-                    currentId = myid;
-                }
-
-                if (currentId.equals(filterChat.get(i).getSender()) || currentId.equals(filterChat.get(i).getReceiver())) {
-                    //filterChatTwo.get(i);
-                }
-
-            }
-        }
 
     }
 

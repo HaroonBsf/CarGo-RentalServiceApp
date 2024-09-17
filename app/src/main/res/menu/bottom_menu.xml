@@ -17,13 +17,13 @@
         android:title="" />
 
     <item
-        android:id="@+id/help"
-        android:icon="@drawable/ic_help"
-        android:title="@string/help" />
+        android:id="@+id/chats"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chats" />
 
     <item
         android:id="@+id/chat"
-        android:icon="@drawable/ic_rent_car"
+        android:icon="@drawable/car_one"
         android:title="Travel" />
 
 </menu>

@@ -18,7 +18,7 @@
             android:id="@+id/tvHelpSupport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_52sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/product_sans_regular"
             android:paddingHorizontal="@dimen/_10sdp"
             android:text="@string/help_support"

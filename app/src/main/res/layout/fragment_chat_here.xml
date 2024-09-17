@@ -39,6 +39,38 @@
         app:layout_constraintEnd_toStartOf="@+id/ivWhatsapp"
         app:layout_constraintTop_toTopOf="@+id/ivWhatsapp" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/car_one"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvViewAdInChat"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img_on"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:backgroundTint="#05df29"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfileImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivProfileImage" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img_off"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_13sdp"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:backgroundTint="#bfbfbf"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProfileImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivProfileImage" />
+
     <TextView
         android:id="@+id/tvInChatOwnerName"
         android:layout_width="0dp"
@@ -52,9 +84,22 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ivCall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvViewAdInChat"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tvUserStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product_sans_regular"
+        android:letterSpacing=".04"
+        android:maxLines="1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInChatOwnerName"
+        app:layout_constraintStart_toEndOf="@+id/tvInChatOwnerName"
         tools:ignore="RtlSymmetry" />
 
     <TextView
@@ -130,7 +175,7 @@
             android:textColorHint="@color/boarding_load_color"
             android:textCursorDrawable="@drawable/cursor_color"
             android:textSize="14sp"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="Autofill,RtlSymmetry" />
 
         <ImageView
             android:id="@+id/ivSendMsg"
