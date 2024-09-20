@@ -104,6 +104,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
         }
 
         holder.itemView.setOnClickListener(v -> {
+            Constant.itemGetModel = null;
             Constant.usersModel = item;
             addToStack(context, new FragmentChatHere(), "UsersFragment");
             NavigationHide();

@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -94,6 +95,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
@@ -160,6 +162,15 @@ public class MainActivity extends AppCompatActivity {
         dataProgressBar = findViewById(R.id.dataProgressBar);
         dataProgressView = findViewById(R.id.dataProgressView);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+                Log.w("FCM", "Fetching FCM registration token failed", task.getException());
+                return;
+            }
+            String token = task.getResult();
+            Log.d("FCM", "Token: " + token);
+        });
 
 //        Window window = getWindow();
 //        window.setStatusBarColor(getResources().getColor(R.color.app_theme_color));
@@ -338,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
                     } else if (id == R.id.help) {
                         loadFragment(getSupportFragmentManager(), new HelpFragment());
                         NavigationHide();
-                    }else if (id == R.id.privacyPolicy) {
+                    } else if (id == R.id.privacyPolicy) {
                         loadFragment(getSupportFragmentManager(), new PrivacyPolicy());
                     } else if (id == R.id.invite) {
                         Toast.makeText(MainActivity.this, "Good Luck", Toast.LENGTH_SHORT).show();
@@ -856,20 +867,17 @@ public class MainActivity extends AppCompatActivity {
                 String fragmentName = backEntry.getName();
                 if ("homeFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("homeFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                    Constant.itemGetModel = null;
                     bottomSheetDialog.show();
                     NavigationVisibile();
                     bottomNavigationView.setSelectedItemId(R.id.home);
                     return;
                 } else if ("searchFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("searchFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                    Constant.itemGetModel = null;
                     return;
                 } else if ("homeCarTypeFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("homeCarTypeFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                    Constant.itemGetModel = null;
                     return;
-                }else if ("UsersFragment".equals(fragmentName)) {
+                } else if ("UsersFragment".equals(fragmentName)) {
                     fragmentManager.popBackStackImmediate("UsersFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     NavigationVisibile();
                     return;
@@ -900,7 +908,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void status(String status){
+    private void status(String status) {
         if (currentUser != null) {
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users").child(currentUser.getUid());
             HashMap<String, Object> hashMap = new HashMap<>();

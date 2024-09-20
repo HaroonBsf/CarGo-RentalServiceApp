@@ -107,6 +107,7 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 if (!isBottomSheetOpen) {
+                    Constant.usersModel = null;
                     Constant.itemGetModel = item;
                     openBottomSheet(v.getContext(), item);
                     isBottomSheetOpen = true;

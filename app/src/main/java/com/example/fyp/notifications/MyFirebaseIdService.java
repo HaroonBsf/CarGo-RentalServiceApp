@@ -1,16 +1,26 @@
 package com.example.fyp.notifications;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import com.example.fyp.R;
 import com.example.fyp.chat.FragmentChatHere;
 import com.example.fyp.chat.TravelFragment;
 import com.example.fyp.chat.UsersFragment;
@@ -22,13 +32,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+@SuppressLint("MissingFirebaseInstanceTokenRefresh")
 public class MyFirebaseIdService extends FirebaseMessagingService {
-
-    @Override
-    public void onNewToken(@NonNull String token) {
-        super.onNewToken(token);
-        updateToken(token);
-    }
 
     private void updateToken(String refreshToken) {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -43,6 +48,10 @@ public class MyFirebaseIdService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+
+        /*if (remoteMessage.getNotification() != null) {
+            showNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
+        }*/
 
         String sented = remoteMessage.getData().get("sented");
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -79,13 +88,18 @@ public class MyFirebaseIdService extends FirebaseMessagingService {
                 .setContentIntent(pendingIntent);
         NotificationManager noti = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    "CHAT", "Messages Notifications", NotificationManager.IMPORTANCE_DEFAULT);
+            noti.createNotificationChannel(channel);
+        }
+
         int i = 0;
         if (j > 0) {
             i = j;
         }
 
         noti.notify(i, builder.build());
-
 
     }
 }

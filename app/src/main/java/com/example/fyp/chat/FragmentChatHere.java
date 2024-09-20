@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +30,7 @@ import com.example.fyp.R;
 import com.example.fyp.adapters.ChatAdapter;
 import com.example.fyp.callback.ReceiverUserIdCallback;
 import com.example.fyp.constant.Constant;
+import com.example.fyp.main.MainActivity;
 import com.example.fyp.models.ChatModel;
 import com.example.fyp.models.GetAddModel;
 import com.example.fyp.models.UsersModel;
@@ -39,8 +39,6 @@ import com.example.fyp.notifications.Data;
 import com.example.fyp.notifications.MyResponse;
 import com.example.fyp.notifications.Sender;
 import com.example.fyp.notifications.Token;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -53,11 +51,8 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
@@ -122,8 +117,10 @@ public class FragmentChatHere extends Fragment {
         linearLayoutManager.setStackFromEnd(true);
         rvChat.setLayoutManager(linearLayoutManager);
 
+        String name;
         if (Constant.itemGetModel != null && Constant.itemGetModel.getOwnerName() != null) {
-            tvInChatOwnerName.setText(Constant.itemGetModel.getOwnerName());
+            name = Constant.itemGetModel.getOwnerName();
+            tvInChatOwnerName.setText(name);
             tvInChatOwnerCompany.setText("Company: " + Constant.itemGetModel.getOwnerCompany());
             tvInChatAdInfo.setText(Constant.itemGetModel.getMake() + " " + Constant.itemGetModel.getModel()
                     + " " + Constant.itemGetModel.getVariant() + " " + Constant.itemGetModel.getYear());
@@ -131,7 +128,8 @@ public class FragmentChatHere extends Fragment {
             tvViewAdInChat.setVisibility(View.GONE);
             tvInChatAdInfo.setVisibility(View.GONE);
             ivProfileImage.setVisibility(View.VISIBLE);
-            tvInChatOwnerName.setText(Constant.usersModel.getName());
+            name = Constant.usersModel.getName();
+            tvInChatOwnerName.setText(name);
             if (Constant.usersModel.getProfile() != null) {
                 Picasso.get()
                         .load(Constant.usersModel.getProfile())
@@ -159,8 +157,8 @@ public class FragmentChatHere extends Fragment {
             uniqueOwnerPhone = Constant.usersModel.getPhone();
         }
 
-        ivWhatsapp.setOnClickListener(v -> whatsAppChat(uniqueOwnerPhone));
-        ivCall.setOnClickListener(v -> dialPadCall(uniqueOwnerPhone));
+        ivWhatsapp.setOnClickListener(v -> whatsAppChat(uniqueOwnerPhone, name));
+        ivCall.setOnClickListener(v -> dialPadCall(uniqueOwnerPhone, name));
 
         chatProgressBar.setVisibility(View.VISIBLE);
         fetchReceiverUserId(getContext(), uniqueOwnerPhone, new ReceiverUserIdCallback() {
@@ -187,7 +185,7 @@ public class FragmentChatHere extends Fragment {
                         @Override
                         public void onReceiverUserIdReceived(String receiverUserId) {
                             if (receiverUserId != null) {
-                                sendMessage(senderUserId, receiverUserId, msg);
+                                sendMessage(senderUserId, receiverUserId, msg, name);
                                 readMessages(getContext(), senderUserId, receiverUserId);
 
                             } else {
@@ -219,7 +217,7 @@ public class FragmentChatHere extends Fragment {
     }
 
     @SuppressLint("SetTextI18n")
-    private void dialPadCall(String uniqueOwnerPhone) {
+    private void dialPadCall(String uniqueOwnerPhone, String name) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.NetworkAlertDialog);
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View dialogView = inflater.inflate(R.layout.open_whatsapp_dialog, null);
@@ -227,9 +225,9 @@ public class FragmentChatHere extends Fragment {
         AlertDialog dialog = builder.create();
         dialog.getWindow().setWindowAnimations(R.style.SlideLeftRightDialog);
         TextView tvWhatsAppNavigate = dialogView.findViewById(R.id.tvWhatsAppNavigate);
-        tvWhatsAppNavigate.setText("You're about to contact with " + Constant.itemGetModel.getOwnerName()
+        tvWhatsAppNavigate.setText("You're about to contact with " + name
                 + ". By continuing, you'll navigate to your mobile contacts, where you can initiate a phone call to " +
-                Constant.itemGetModel.getOwnerName() + ". Standard call rates may apply.");
+                name + ". Standard call rates may apply.");
         dialogView.findViewById(R.id.btnAgreeWhatsApp).setOnClickListener(v -> {
             openDialPad(uniqueOwnerPhone);
             dialog.dismiss();
@@ -246,7 +244,7 @@ public class FragmentChatHere extends Fragment {
     }
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
-    private void whatsAppChat(String uniqueOwnerPhone) {
+    private void whatsAppChat(String uniqueOwnerPhone, String name) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.NetworkAlertDialog);
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View dialogView = inflater.inflate(R.layout.open_whatsapp_dialog, null);
@@ -255,8 +253,8 @@ public class FragmentChatHere extends Fragment {
         dialog.getWindow().setWindowAnimations(R.style.SlideLeftRightDialog);
         TextView tvWhatsAppNavigate = dialogView.findViewById(R.id.tvWhatsAppNavigate);
         tvWhatsAppNavigate.setText("You're about to open a chat on WhatsApp with " +
-                Constant.itemGetModel.getOwnerName() + ". By continuing, you'll leave Car Go and open WhatsApp. " +
-                Constant.itemGetModel.getOwnerName() + " will be able to see your WhatsApp profile information.");
+                name + ". By continuing, you'll leave Car Go and open WhatsApp. " +
+                name + " will be able to see your WhatsApp profile information.");
         dialogView.findViewById(R.id.btnAgreeWhatsApp).setOnClickListener(v -> {
             openWhatsApp(uniqueOwnerPhone);
             dialog.dismiss();
@@ -329,8 +327,9 @@ public class FragmentChatHere extends Fragment {
         });
     }
 
-    private void sendMessage(String sender, String receiver, String message) {
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+    private void sendMessage(String sender, String receiver, String message, String name) {
+        DatabaseReference reference;
+        reference = FirebaseDatabase.getInstance().getReference();
 
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("sender", sender);
@@ -338,28 +337,16 @@ public class FragmentChatHere extends Fragment {
         hashMap.put("message", message);
         hashMap.put("isseen", false);
         hashMap.put("senderName", Constant.userData.name);
-        hashMap.put("recieverName", Constant.itemGetModel.getOwnerName());
+        hashMap.put("recieverName", name);
 
 
         reference.child("chats").push().setValue(hashMap);
 
         final String msg = message;
-        reference.child("users").child(fUser.getUid());
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UsersModel user = snapshot.getValue(UsersModel.class);
-                if (notify) {
-                    sendNotification(receiver, user.getName(), msg);
-                }
-                notify = false;
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
+        if (notify) {
+            sendNotification(receiver, Constant.userData.name, msg);
+        }
+        notify = false;
 
     }
 
@@ -371,15 +358,15 @@ public class FragmentChatHere extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Token token = dataSnapshot.getValue(Token.class);
-                    Data data = new Data(fUser.getUid(), R.mipmap.ic_launcher, name+": "+msg, "New Message", receiver);
+                    Data data = new Data(fUser.getUid(), R.mipmap.ic_launcher, name + ": " + msg, "New Message", receiver);
                     Sender sender = new Sender(data, token.getToken());
 
                     apiService.sendNotification(sender)
                             .enqueue(new Callback<MyResponse>() {
                                 @Override
                                 public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
-                                    if (response.code() == 200){
-                                        if (response.body().success != 1){
+                                    if (response.code() == 200) {
+                                        if (response.body().success != 1) {
                                             Toast.makeText(getContext(), "Failed!", Toast.LENGTH_SHORT).show();
                                         }
 
@@ -510,6 +497,19 @@ public class FragmentChatHere extends Fragment {
                 });
             }
         });
+    }
+
+    private void authReceiver() {
+        AccessToken accessToken = new AccessToken();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String token = accessToken.getAccessToken(getContext());
+                Log.d("token", "Token: "+ token);
+            }
+        }).start();
+
     }
 
     /*@Override
