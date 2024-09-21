@@ -19,6 +19,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
@@ -406,6 +407,8 @@ public class MainActivity extends AppCompatActivity {
         };
         mAuth.addAuthStateListener(authStateListener);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
     }
 

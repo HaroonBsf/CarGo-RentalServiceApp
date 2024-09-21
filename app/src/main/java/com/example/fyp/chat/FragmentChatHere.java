@@ -9,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +34,7 @@ import com.example.fyp.callback.ReceiverUserIdCallback;
 import com.example.fyp.constant.Constant;
 import com.example.fyp.models.ChatModel;
 import com.example.fyp.models.GetAddModel;
-import com.example.fyp.notifications.FCMService;
+import com.example.fyp.notifications.SendNotification;
 import com.example.fyp.notifications.Token;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -40,10 +42,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.squareup.picasso.Picasso;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,7 +69,7 @@ public class FragmentChatHere extends Fragment {
     ValueEventListener seenListener;
     DatabaseReference reference;
     FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
-    boolean notify = false;
+    //boolean notify = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -166,7 +168,6 @@ public class FragmentChatHere extends Fragment {
         btnSendMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                notify = true;
 
                 String msg = etMessage.getText().toString().trim();
                 if (!msg.equals("")) {
@@ -201,7 +202,17 @@ public class FragmentChatHere extends Fragment {
             }
         });
 
-        updateToken(String.valueOf(FirebaseMessaging.getInstance().getToken()));
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            if (!task.isSuccessful()) {
+                Log.w("FCM", "Fetching FCM token failed", task.getException());
+                return;
+            }
+            String newToken = task.getResult();
+            updateToken(newToken);
+        });
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
     }
 
@@ -332,34 +343,40 @@ public class FragmentChatHere extends Fragment {
         reference.child("chats").push().setValue(hashMap);
 
         final String msg = message;
-        if (notify) {
-            sendNotification(receiver, Constant.userData.name, msg);
-        }
-        notify = false;
+        sendNotification(receiver, Constant.userData.name, msg);
 
     }
 
     private void sendNotification(String receiver, String name, String msg) {
-        DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
-        Query query = tokens.orderByKey().equalTo(receiver);
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    Token token = dataSnapshot.getValue(Token.class);
-                    if (token != null){
-                        FCMService fcmService = new FCMService();
-                        fcmService.sendNotification(String.valueOf(token), fUser.getUid(), R.mipmap.ic_launcher, name+": "+msg, "New Message", receiver);
+        FirebaseDatabase.getInstance().getReference("Tokens")
+                .child(receiver).child("token").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String token = snapshot.getValue(String.class);
+                        if (token != null) {
+                            Handler handler = new Handler();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    SendNotification sendNotification =
+                                            new SendNotification(token, name, msg, getContext());
+                                    sendNotification.SendNotification();
+
+                                }
+                            }, 300);
+
+
+                        } else {
+                            Toast.makeText(getContext(), "Token is null!", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("FCM", "Error getting token: "+ error);
 
-            }
-        });
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Log.e("FCM", "Error getting token: " + error);
+                    }
+                });
 
     }
 

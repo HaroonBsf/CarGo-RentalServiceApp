@@ -58,9 +58,10 @@
                 android:fontFamily="@font/product_sans_regular"
                 android:padding="@dimen/_5sdp"
                 android:text="Cancel"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/app_theme_color"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
@@ -82,8 +83,9 @@
                 android:padding="@dimen/_5sdp"
                 android:text="Agree"
                 android:textAllCaps="false"
+                android:textAlignment="center"
                 android:textColor="@color/app_theme_color"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>

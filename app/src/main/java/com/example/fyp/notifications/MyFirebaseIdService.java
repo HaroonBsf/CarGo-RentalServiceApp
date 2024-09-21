@@ -14,7 +14,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 
+import com.example.fyp.R;
 import com.example.fyp.chat.FragmentChatHere;
+import com.example.fyp.chat.UsersFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -27,38 +29,24 @@ public class MyFirebaseIdService extends FirebaseMessagingService {
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
-        /*if (remoteMessage.getNotification() != null) {
-            showNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
-        }*/
-
-        String sented = remoteMessage.getData().get("sented");
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
-        if (firebaseUser != null && sented.equals(firebaseUser.getUid())) {
+        if (remoteMessage.getNotification() != null) {
             sendNotification(remoteMessage);
         }
 
     }
 
     private void sendNotification(RemoteMessage remoteMessage) {
-        String user = remoteMessage.getData().get("user");
-        String icon = remoteMessage.getData().get("icon");
-        String title = remoteMessage.getData().get("title");
-        String body = remoteMessage.getData().get("body");
+        //String user = remoteMessage.getData().get("user");
+        String title = remoteMessage.getNotification().getTitle();
+        String body = remoteMessage.getNotification().getBody();
 
-        RemoteMessage.Notification notification = remoteMessage.getNotification();
-        int j = Integer.parseInt(user.replaceAll("[\\D]", ""));
-
-        Intent intent = new Intent(this, FragmentChatHere.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("userid", user);
-        intent.putExtras(bundle);
+        Intent intent = new Intent(this, UsersFragment.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, j, intent, PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_MUTABLE);
 
         Uri defaultSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(Integer.parseInt(icon))
+                .setSmallIcon(R.mipmap.ic_launcher_round)
                 .setContentTitle(title)
                 .setContentText(body)
                 .setAutoCancel(true)
@@ -72,12 +60,7 @@ public class MyFirebaseIdService extends FirebaseMessagingService {
             noti.createNotificationChannel(channel);
         }
 
-        int i = 0;
-        if (j > 0) {
-            i = j;
-        }
-
-        noti.notify(i, builder.build());
+        noti.notify(0, builder.build());
 
     }
 }
