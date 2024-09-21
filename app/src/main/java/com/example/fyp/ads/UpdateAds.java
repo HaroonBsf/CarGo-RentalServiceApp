@@ -1,11 +1,8 @@
 package com.example.fyp.ads;
 
-import static android.content.Context.MODE_PRIVATE;
 import static com.example.fyp.ads.AddCar.getAllUserAds;
-import static com.example.fyp.main.MainActivity.NavigationHide;
 import static com.example.fyp.main.MainActivity.dataProgressBar;
 import static com.example.fyp.main.MainActivity.dataProgressView;
-import static com.example.fyp.main.MainActivity.drawerLayout;
 import static com.example.fyp.main.MainActivity.loadFragment;
 
 import android.annotation.SuppressLint;
@@ -13,7 +10,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,18 +23,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.AnimationTypes;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.example.fyp.Boarding.TrackingBoard;
 import com.example.fyp.R;
 import com.example.fyp.constant.Constant;
-import com.example.fyp.map.GetLocation;
-import com.example.fyp.map.MapsFragment;
 import com.example.fyp.map.OwenerGoogleMapActivity;
 import com.example.fyp.map.RandomCodeGenerator;
 import com.google.android.gms.tasks.OnCompleteListener;

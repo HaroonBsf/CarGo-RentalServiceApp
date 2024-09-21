@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="5dp"
     android:layout_marginVertical="@dimen/_8sdp"
@@ -12,8 +12,9 @@
     android:focusable="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
         android:background="?attr/selectableItemBackgroundBorderless">
 
         <androidx.cardview.widget.CardView
@@ -22,6 +23,7 @@
             android:layout_height="@dimen/_100sdp"
             app:cardCornerRadius="@dimen/_15sdp"
             app:cardElevation="3dp"
+            android:layout_marginTop="@dimen/_2sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -37,7 +39,7 @@
                 android:id="@+id/tvPrivateInsurance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:background="@color/app_theme_color"
                 android:fontFamily="@font/product_sans_regular"
                 android:paddingStart="@dimen/_10sdp"

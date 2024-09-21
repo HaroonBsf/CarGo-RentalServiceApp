@@ -55,7 +55,6 @@ public class SendNotification {
                 @Override
                 public Map<String, String> getHeaders() {
                     final Map<String, String> headers = new HashMap<>();
-                    final CountDownLatch latch = new CountDownLatch(1);
 
                     AccessToken accessToken = new AccessToken();
                     String token = accessToken.getAccessToken(context);

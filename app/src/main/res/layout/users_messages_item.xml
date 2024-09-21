@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_2sdp"
                 android:fontFamily="@font/product_sans_regular"
-                android:text="@string/last_message"
+                android:text=""
                 android:paddingEnd="@dimen/_3sdp"
                 android:textColor="@color/dummy_black"
                 android:textSize="14sp"

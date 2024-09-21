@@ -1,6 +1,7 @@
 package com.example.fyp.adapters;
 
 import static com.example.fyp.main.MainActivity.NavigationHide;
+import static com.example.fyp.main.MainActivity.drawerLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -107,6 +109,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
             Constant.itemGetModel = null;
             Constant.usersModel = item;
             addToStack(context, new FragmentChatHere(), "UsersFragment");
+            drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
             NavigationHide();
         });
 

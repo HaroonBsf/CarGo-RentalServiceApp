@@ -66,7 +66,6 @@ import com.example.fyp.ads.EditAds;
 import com.example.fyp.ads.MyAdsFragment;
 import com.example.fyp.ads.UpdateAds;
 import com.example.fyp.callback.CallbackData;
-import com.example.fyp.chat.AccessToken;
 import com.example.fyp.chat.FragmentChatHere;
 import com.example.fyp.chat.TravelFragment;
 import com.example.fyp.chat.UsersFragment;

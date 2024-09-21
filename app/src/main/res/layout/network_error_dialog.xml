@@ -46,7 +46,7 @@
             android:textStyle="bold"
             android:letterSpacing=".12"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:textSize="18sp"/>
 
     </androidx.cardview.widget.CardView>
 

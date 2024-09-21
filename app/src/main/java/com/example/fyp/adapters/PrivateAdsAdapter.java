@@ -1,6 +1,5 @@
 package com.example.fyp.adapters;
 
-import static com.example.fyp.main.MainActivity.dataProgressView;
 import static com.example.fyp.network.ConnectionReceiver.isConnected;
 import static com.example.fyp.util.NetworkDialogUtils.showNetworkDialog;
 
@@ -15,7 +14,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fyp.Login.OTPVerification;
 import com.example.fyp.R;
 import com.example.fyp.callback.OnItemClickCallback;
 import com.example.fyp.constant.Constant;
