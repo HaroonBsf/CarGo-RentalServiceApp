@@ -2,10 +2,10 @@ package com.example.fyp.notifications;
 
 public class Sender {
     public Data data;
-    public String to;
+    public String token;
 
-    public Sender(Data data, String to) {
+    public Sender(Data data, String token) {
         this.data = data;
-        this.to = to;
+        this.token = token;
     }
 }

@@ -30,14 +30,9 @@ import com.example.fyp.R;
 import com.example.fyp.adapters.ChatAdapter;
 import com.example.fyp.callback.ReceiverUserIdCallback;
 import com.example.fyp.constant.Constant;
-import com.example.fyp.main.MainActivity;
 import com.example.fyp.models.ChatModel;
 import com.example.fyp.models.GetAddModel;
-import com.example.fyp.models.UsersModel;
-import com.example.fyp.notifications.Client;
-import com.example.fyp.notifications.Data;
-import com.example.fyp.notifications.MyResponse;
-import com.example.fyp.notifications.Sender;
+import com.example.fyp.notifications.FCMService;
 import com.example.fyp.notifications.Token;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -55,9 +50,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class FragmentChatHere extends Fragment {
 
@@ -75,7 +67,6 @@ public class FragmentChatHere extends Fragment {
     ValueEventListener seenListener;
     DatabaseReference reference;
     FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
-    APIService apiService;
     boolean notify = false;
 
     @Override
@@ -109,8 +100,6 @@ public class FragmentChatHere extends Fragment {
         // Contact phone
         ivCall = view.findViewById(R.id.ivCall);
         ivWhatsapp = view.findViewById(R.id.ivWhatsapp);
-
-        apiService = Client.getClient("https://fcm.googleapis.com/").create(APIService.class);
 
         rvChat.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -358,32 +347,16 @@ public class FragmentChatHere extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Token token = dataSnapshot.getValue(Token.class);
-                    Data data = new Data(fUser.getUid(), R.mipmap.ic_launcher, name + ": " + msg, "New Message", receiver);
-                    Sender sender = new Sender(data, token.getToken());
-
-                    apiService.sendNotification(sender)
-                            .enqueue(new Callback<MyResponse>() {
-                                @Override
-                                public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
-                                    if (response.code() == 200) {
-                                        if (response.body().success != 1) {
-                                            Toast.makeText(getContext(), "Failed!", Toast.LENGTH_SHORT).show();
-                                        }
-
-                                    }
-                                }
-
-                                @Override
-                                public void onFailure(Call<MyResponse> call, Throwable throwable) {
-
-                                }
-                            });
-
+                    if (token != null){
+                        FCMService fcmService = new FCMService();
+                        fcmService.sendNotification(String.valueOf(token), fUser.getUid(), R.mipmap.ic_launcher, name+": "+msg, "New Message", receiver);
+                    }
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("FCM", "Error getting token: "+ error);
 
             }
         });
@@ -497,19 +470,6 @@ public class FragmentChatHere extends Fragment {
                 });
             }
         });
-    }
-
-    private void authReceiver() {
-        AccessToken accessToken = new AccessToken();
-
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String token = accessToken.getAccessToken(getContext());
-                Log.d("token", "Token: "+ token);
-            }
-        }).start();
-
     }
 
     /*@Override

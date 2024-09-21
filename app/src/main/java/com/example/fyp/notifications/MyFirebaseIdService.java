@@ -1,49 +1,27 @@
 package com.example.fyp.notifications;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
-import com.example.fyp.R;
 import com.example.fyp.chat.FragmentChatHere;
-import com.example.fyp.chat.TravelFragment;
-import com.example.fyp.chat.UsersFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 @SuppressLint("MissingFirebaseInstanceTokenRefresh")
 public class MyFirebaseIdService extends FirebaseMessagingService {
-
-    private void updateToken(String refreshToken) {
-        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
-        if (firebaseUser != null) {
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Tokens");
-            Token token = new Token(refreshToken);
-            reference.child(firebaseUser.getUid()).setValue(token);
-        }
-    }
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {

@@ -65,6 +65,7 @@ import com.example.fyp.ads.EditAds;
 import com.example.fyp.ads.MyAdsFragment;
 import com.example.fyp.ads.UpdateAds;
 import com.example.fyp.callback.CallbackData;
+import com.example.fyp.chat.AccessToken;
 import com.example.fyp.chat.FragmentChatHere;
 import com.example.fyp.chat.TravelFragment;
 import com.example.fyp.chat.UsersFragment;
@@ -74,6 +75,7 @@ import com.example.fyp.home.HomeFragment;
 import com.example.fyp.home.ProfileFragment;
 import com.example.fyp.models.LocationSliderModel;
 import com.example.fyp.models.ReadWriteUserDetails;
+import com.example.fyp.notifications.Token;
 import com.example.fyp.search.SearchNode;
 import com.example.fyp.util.Util;
 import com.getkeepsafe.taptargetview.TapTarget;
@@ -170,6 +172,11 @@ public class MainActivity extends AppCompatActivity {
             }
             String token = task.getResult();
             Log.d("FCM", "Token: " + token);
+            if (currentUser != null) {
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Tokens");
+                Token token1 = new Token(token);
+                reference.child(currentUser.getUid()).setValue(token1);
+            }
         });
 
 //        Window window = getWindow();
