@@ -55,10 +55,9 @@
                     android:layout_width="@dimen/_35sdp"
                     android:layout_height="@dimen/_35sdp"
                     android:padding="@dimen/_2sdp"
-                    android:src="@drawable/gif_location_load"
+                    android:src="@drawable/location_update_icon"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:visibility="gone"
-                    android:tint="@color/black"
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@+id/ivUpdateLocation"/>

@@ -58,6 +58,7 @@ public class SendNotification {
 
                     AccessToken accessToken = new AccessToken();
                     String token = accessToken.getAccessToken(context);
+                    Log.d("token", "FCMToken"+token);
 
                     headers.put("content-type", "application/json");
                     headers.put("authorization", "Bearer " + token);

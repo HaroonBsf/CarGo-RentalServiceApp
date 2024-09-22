@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                     ivLocationLoad.setVisibility(View.GONE);
                     viewPager.setVisibility(View.VISIBLE);
                 }
-            }, 5000);
+            }, 4000);
         });
 
 
