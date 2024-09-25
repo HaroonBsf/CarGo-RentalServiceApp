@@ -1,4 +1,4 @@
-# Car Go
+# Car Go Android App
 
 ![The Banner](https://github.com/user-attachments/assets/49258035-3116-4c37-9fc5-39004f442410)
 
