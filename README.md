@@ -1,7 +1,6 @@
 # Car Go
 
-![Untitled (2)](https://github.com/user-attachments/assets/a7628791-9707-4d30-8e9f-e9adafa1e5d5)
-
+![The Banner](https://github.com/user-attachments/assets/900f517a-722b-43c3-a18d-945851ae20ea)
 
 <img alt = "CarGo Logo" src="https://github.com/user-attachments/assets/c8b3f3da-2ec6-47a2-bf69-c08212eab7bc" height="140px" width="140px" align="right"/>
 
