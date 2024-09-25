@@ -1,6 +1,6 @@
 # Car Go Android App
 
-![The Banner](https://github.com/user-attachments/assets/e52249cd-63d1-448c-bae6-2a1faa84f6a0)
+![The Banner](https://github.com/user-attachments/assets/f3d4d0ed-199c-4814-a9fd-b314d8a60910)
 
 <img alt = "CarGo Logo" src="https://github.com/user-attachments/assets/c8b3f3da-2ec6-47a2-bf69-c08212eab7bc" height="140px" width="140px" align="right"/>
 
