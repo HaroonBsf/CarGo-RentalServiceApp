@@ -1,7 +1,13 @@
-# Car Go
+# Car Go Android App
+
+![The Banner](https://github.com/user-attachments/assets/b1ac3da3-ad92-4ec0-a266-caa37049b0d4)
+
+## Overview
+<img alt = "CarGo Logo" src="https://github.com/user-attachments/assets/c8b3f3da-2ec6-47a2-bf69-c08212eab7bc" height="140px" width="140px" align="right"/>
 
 Car Go is an Android app developed in Android Studio, primarily using Java, Firebase, Google Maps API, the CallCourier API, and more. It simplifies online car rentals by enabling companies to upload ads with accurate, location-based services using a comprehensive city list of Pakistan.
-- Support the project by starring the repository ⭐.
+
+[![Releases](https://img.shields.io/github/release/HaroonBsf/CarGo-RentalServiceApp.svg)](https://github.com/HaroonBsf/CarGo-RentalServiceApp/releases/latest)
 
 ## Note
 **Car Go** is currently under development, with ongoing plans to add more backend features and enhancements, including real-time car tracking.
