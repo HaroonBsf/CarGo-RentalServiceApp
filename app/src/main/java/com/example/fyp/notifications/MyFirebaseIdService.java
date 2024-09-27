@@ -6,28 +6,17 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
-import androidx.core.graphics.drawable.IconCompat;
 
 import com.example.fyp.R;
 import com.example.fyp.main.MainActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 @SuppressLint("MissingFirebaseInstanceTokenRefresh")
 public class MyFirebaseIdService extends FirebaseMessagingService {
