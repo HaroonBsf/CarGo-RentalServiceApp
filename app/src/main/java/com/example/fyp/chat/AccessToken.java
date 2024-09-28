@@ -13,7 +13,7 @@ public class AccessToken {
 
     public String getAccessToken(Context context) {
         try {
-            InputStream serviceAccountStream = context.getAssets().open("fyp-77d6f-firebase-adminsdk-lqn96-54a4da0b5a.json");
+            InputStream serviceAccountStream = context.getAssets().open("fyp-77d6f-firebase-adminsdk-lqn96-310b87fb59.json");
             GoogleCredentials googleCredentials = GoogleCredentials.fromStream(serviceAccountStream)
                     .createScoped(firebaseMessagingScope);
             googleCredentials.refresh();

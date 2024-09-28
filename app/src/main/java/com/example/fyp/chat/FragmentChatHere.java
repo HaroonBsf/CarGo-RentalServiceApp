@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -361,7 +362,7 @@ public class FragmentChatHere extends Fragment {
                                 @Override
                                 public void run() {
                                     SendNotification sendNotification =
-                                            new SendNotification(token, name, msg, getContext());
+                                            new SendNotification(token, name, msg, receiver, getContext());
                                     sendNotification.SendNotification();
 
                                 }
@@ -477,6 +478,7 @@ public class FragmentChatHere extends Fragment {
                             } else {
                                 tvUserStatus.setText("online");
                                 tvUserStatus.setTextColor(getResources().getColor(R.color.online));
+                                currentUser(receiverUserId);
                                 cv_img_off.setVisibility(View.GONE);
                                 cv_img_on.setVisibility(View.VISIBLE);
                             }
@@ -491,9 +493,17 @@ public class FragmentChatHere extends Fragment {
         });
     }
 
-    /*@Override
+    private void currentUser(String userId){
+        SharedPreferences.Editor editor = getActivity().getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
+        editor.putString("currentuser", userId);
+        editor.apply();
+
+    }
+
+    @Override
     public void onPause() {
         super.onPause();
-        //reference.removeEventListener(seenListener);
-    }*/
+        currentUser("none");
+
+    }
 }

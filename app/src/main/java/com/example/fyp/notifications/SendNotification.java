@@ -24,13 +24,15 @@ public class SendNotification {
     private String userFcmToken;
     private String title;
     private String body;
+    private String user;
     private Context context;
     private String postUrl = "https://fcm.googleapis.com/v1/projects/fyp-77d6f/messages:send";
 
-    public SendNotification(String userFcmToken, String title, String body, Context context) {
+    public SendNotification(String userFcmToken, String title, String body, String user, Context context) {
         this.userFcmToken = userFcmToken;
         this.title = title;
         this.body = body;
+        this.user = user;
         this.context = context;
     }
 
@@ -41,10 +43,14 @@ public class SendNotification {
         try {
             JSONObject messageobject = new JSONObject();
             JSONObject notificationObject = new JSONObject();
+            JSONObject dataObject = new JSONObject();
+
             notificationObject.put("title", title);
             notificationObject.put("body", body);
+            dataObject.put("user", user);
             messageobject.put("token", userFcmToken);
             messageobject.put("notification", notificationObject);
+            messageobject.put("data", dataObject);
             mainObj.put("message", messageobject);
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, postUrl, mainObj, response -> {
 
