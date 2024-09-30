@@ -3,11 +3,11 @@
   <component name="deploymentTargetSelector">
     <selectionStates>
       <SelectionState runConfigName="app">
-        <option name="selectionMode" value="DIALOG" />
-        <DropdownSelection timestamp="2024-09-21T13:34:26.584474500Z">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-09-28T21:46:53.404975600Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="PhysicalDevice" identifier="serial=99161FFAZ0042C" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\haroo\.android\avd\Pixel_8_API_34.avd" />
             </handle>
           </Target>
         </DropdownSelection>
@@ -15,12 +15,12 @@
           <targets>
             <Target type="DEFAULT_BOOT">
               <handle>
-                <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\haroo\.android\avd\Pixel_7a_API_34.avd" />
+                <DeviceId pluginId="PhysicalDevice" identifier="serial=99161FFAZ0042C" />
               </handle>
             </Target>
             <Target type="DEFAULT_BOOT">
               <handle>
-                <DeviceId pluginId="PhysicalDevice" identifier="serial=99161FFAZ0042C" />
+                <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\haroo\.android\avd\Pixel_8_API_34.avd" />
               </handle>
             </Target>
           </targets>
