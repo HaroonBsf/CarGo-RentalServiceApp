@@ -389,6 +389,7 @@ public class AddCar extends Fragment implements OnCitySelectedListener, ImageSel
                             addImages.add(imageUrl);
 
                             if (count != selectedImages.size()) {
+//                                recursion method
                                 uploadImage(selectedImages, uniqueKey, count + 1);
                             }
                         });
